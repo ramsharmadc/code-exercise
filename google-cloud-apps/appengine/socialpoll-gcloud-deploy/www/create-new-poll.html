@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SocialPollApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="socialpoll.com">
+    <meta name="author" content="simpleapps.com">
+
+    <title>Social Poll</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="js/jquery-3.1.0.js"></script>
+
+</head>
+
+<body>
+
+<!-- Header Section. Should be same for every page. -->
+<div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> <i class="fa fa-cube"></i>
+                Social Poll
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://in.linkedin.com/in/social-poll"
+                       target="_blank"><i class="fa fa-linkedin-square"></i><span
+                        class="visible-xs-inline visible-sm-inline"> </span></a></li>
+                <li><a href="https://github.com/social-poll" target="_blank"><i
+                        class="fa fa-github"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="https://twitter.com/social-poll" target="_blank"><i
+                        class="fa fa-twitter"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="https://www.facebook.com/social-poll"
+                       target="_blank"><i class="fa fa-facebook"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="mailto:social-poll@gmail.com" target="_blank"><i
+                        class="fa fa-envelope"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Page Section-->
+
+<div id="start-new-poll-div" ng-controller="SocialPollCtrl">
+    <form role="form" ng-submit="submitNewPoll()">
+        <div id="start-new-poll-header-div">
+            <p>
+            <h3>Topic:</h3> <input type="name" id="poll-name-txt" placeholder="Type your poll here"/>
+            </p>
+            <p>
+                Option 1:
+                <input type="text" id="poll-option-yes-txt" placeholder="YES"/>
+            </p>
+            <p>
+                Option 2:
+                <input type="text" id="poll-option-no-txt" placeholder="NO"/>
+            </p>
+        </div>
+        <div>
+            <input type="submit" id="start-new-poll-submit-btn" value="Submit Poll"/>
+        </div>
+    </form>
+</div>
+
+<script src="js/hover.zoom.js"></script>
+<script src="js/hover.zoom.conf.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/SocialPollCtrl.js"></script>
+
+</body>
+</html>

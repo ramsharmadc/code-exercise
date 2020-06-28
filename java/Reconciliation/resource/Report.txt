@@ -1,0 +1,11 @@
+# XY exact matches
+x0y0, 
+
+# XY weak matches
+x1y1, x2y2, x3y3, x6y6, 
+
+# X breaks
+x4, x5, x7, 
+
+# Y breaks
+y4, y5, y7, 

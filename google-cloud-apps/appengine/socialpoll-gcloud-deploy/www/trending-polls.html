@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SocialPoll">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="socialpoll.com">
+    <meta name="author" content="simpleapps.com">
+
+    <title>Social_Poll</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+        function drawBasic() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('timeofday', 'Poll Topics');
+        data.addColumn('number', 'Polling level');
+        data.addRows([
+            [{v: [8, 0, 0], f: '8 am'}, 1],
+            [{v: [9, 0, 0], f: '9 am'}, 2],
+            [{v: [10, 0, 0], f:'10 am'}, 3],
+            [{v: [11, 0, 0], f: '11 am'}, 4],
+            [{v: [12, 0, 0], f: '12 pm'}, 5],
+            [{v: [13, 0, 0], f: '1 pm'}, 6],
+            [{v: [14, 0, 0], f: '2 pm'}, 7],
+            [{v: [15, 0, 0], f: '3 pm'}, 8],
+            [{v: [16, 0, 0], f: '4 pm'}, 9],
+            [{v: [17, 0, 0], f: '5 pm'}, 10],
+        ]);
+        var options = {
+            title: 'Polling Level Throughout the Day',
+            hAxis: {
+                title: 'Topic of Poll',
+                format: 'h:mm a',
+                viewWindow: {
+                    min: [7, 30, 0],
+                    max: [17, 30, 0]
+                }
+            },
+            vAxis: {
+                title: 'Social Interaction (scale of 1-10)'
+            }
+        };
+        var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+        chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+
+<!-- Header Section. Should be same for every page. -->
+<div class="navbar navbar-inverse navbar-static-top">
+
+    <div ng-controller="SocialPollCtrl" ng-init="showTrend">
+
+    </div>
+
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> <i class="fa fa-cube"></i>
+                Social Poll
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://in.linkedin.com/in/social-poll"
+                       target="_blank"><i class="fa fa-linkedin-square"></i><span
+                        class="visible-xs-inline visible-sm-inline"> </span></a></li>
+                <li><a href="https://github.com/social-poll" target="_blank"><i
+                        class="fa fa-github"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="https://twitter.com/social-poll" target="_blank"><i
+                        class="fa fa-twitter"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="https://www.facebook.com/social-poll"
+                       target="_blank"><i class="fa fa-facebook"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+                <li><a href="mailto:social-poll@gmail.com" target="_blank"><i
+                        class="fa fa-envelope"></i><span
+                        class="visible-xs-inline visible-sm-inline"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="show-action-div" align="center" ng-controller="SocialPollCtrl">
+    <div id="chart_div"></div>
+
+    <div id="start-new-poll">
+        <h4><u>Trending Polls</u></h4>
+    </div>
+    <div id="join-poll">
+        <h5><a href="view-poll?id=1">Are trump supporters lethal to society?</a></h5>
+        <ul>
+            <li>YES 67K</li>
+            <li>NO 53K</li>
+            <li>DON'T KNOW 53K</li>
+            <h5>Participants 120K</h5>
+        </ul>
+        <input type="button" value="Join">
+
+    </div>
+    <div id="trending-poll">
+        <br/>
+        <h5><a href="_blank">Is Hollywood falling down?</a></h5>
+        <ul>
+            <li>YES 167K</li>
+            <li>NO 503K</li>
+            <li>NO IDEA 673K</li>
+            <h5>Participants 3345K</h5>
+        </ul>
+        <input type="button" value="Join">
+    </div>
+    <div id="close-poll">
+        <br/>
+        <h5><a href="_blank">Is India immune to new immigration laws?</a></h5>
+        <ul>
+            <li>YES 167K</li>
+            <li>NO 503K</li>
+            <li>IT SUCKS 3K</li>
+            <h5>Participants 3345K</h5>
+        </ul>
+        <input type="button" value="Join">
+    </div>
+
+    <h5><a title="Click here to see more trendy polls">see more...</a></h5>
+</div>
+
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="js/hover.zoom.js"></script>
+<script src="js/hover.zoom.conf.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.1.0.js"></script>
+<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+<script src="js/SocialPollCtrl.js"></script>
+</body>
+</html>
