@@ -1,0 +1,7 @@
+## Test file for /main.java.test.answers/q2.sql
+## The script should be run after using a database
+## It will create 2 functions, initCapWord() and initCap()
+## Calls initCap()
+## The output will be present in the result window
+## Test calls are happening in script itself
+## Test calls can be modified to add more test scenarios

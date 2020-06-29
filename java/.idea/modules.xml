@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/catalogue/catalogue.iml" filepath="$PROJECT_DIR$/catalogue/catalogue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coupon-api/coupon-api.iml" filepath="$PROJECT_DIR$/coupon-api/coupon-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-snapshot-service/data-snapshot-service.iml" filepath="$PROJECT_DIR$/data-snapshot-service/data-snapshot-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
+    </modules>
+  </component>
+</project>

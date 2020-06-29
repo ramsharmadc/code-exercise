@@ -1,7 +1,7 @@
 package problem.misc;
 
 import dsa.algos.sorting.Quicksort;
-import problem.util.CommonUtils;
+import util.CommonUtils;
 
 public class CommonElementsIn3SortedArrays {
 

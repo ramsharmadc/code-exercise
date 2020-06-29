@@ -1,8 +1,5 @@
 package lang.basics.cloning.student;
 
-/**
- * Created by lenovo on 4/19/2014.
- */
 public class Student implements Cloneable {
 
     private String name;

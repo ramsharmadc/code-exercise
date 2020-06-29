@@ -1,8 +1,0 @@
-## Test file for /main.java.answers/q3.sql
-## The script should be run after using a database
-## It creates procedure.
-## Procedure reads the data from the table and normalize and then puts in a temp table
-## Call the procedure
-## The output will be present in the result window
-## Table creation and sample test data insertion is happening in script itself
-## The insert statements in the script can be modified to add more test scenarios

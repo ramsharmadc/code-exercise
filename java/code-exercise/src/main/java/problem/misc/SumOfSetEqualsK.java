@@ -1,6 +1,6 @@
 package problem.misc;
 
-import problem.util.CommonUtils;
+import util.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

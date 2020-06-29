@@ -35,14 +35,12 @@ public class Comparison<T> implements Comparable<T> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public int compareTo(final T int_02) {
-
+		assert this.value != null;
 		return ((Comparable<T>) this.value).compareTo(int_02);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean equals(final Object obj) {
-
-		return this.value == (T) obj;
+		return this.value == obj;
 	}
 }

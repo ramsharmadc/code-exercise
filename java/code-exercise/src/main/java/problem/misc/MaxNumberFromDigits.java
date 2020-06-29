@@ -1,6 +1,6 @@
 package problem.misc;
 
-import problem.util.CommonUtils;
+import util.CommonUtils;
 
 /**
  * Given a Integer, find the maximum number that can be formed from the digits.

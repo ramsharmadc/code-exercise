@@ -1,6 +1,6 @@
 package problem.misc;
 
-import problem.util.CommonUtils;
+import util.CommonUtils;
 
 public class EvenLeftOddRight {
 

@@ -1,8 +1,0 @@
-## Test file for /main.java.answers/q4.sql
-## The script should be run after using a database
-## It creates a table with sample data
-## Use the insert query to give the data range.
-## Call the query
-## The output will be present in the result window
-## Table creation and sample test data insertion is happening in script itself
-## The insert statements in the script can be modified to add more test scenarios

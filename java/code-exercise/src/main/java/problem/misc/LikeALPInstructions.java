@@ -43,7 +43,7 @@ public class LikeALPInstructions {
 
 	private int multiply(int n1, int n2) {
 
-		return problem.misc.MultiplicationWithoutOperator.multiply(n1, n2);
+		return MultiplicationWithoutOperator.multiply(n1, n2);
 	}
 
 	public boolean nonEquality(int n1, int n2) {

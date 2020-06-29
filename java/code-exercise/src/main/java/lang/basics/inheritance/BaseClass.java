@@ -44,21 +44,14 @@ public class BaseClass {
 	 * @return the bool
 	 */
 	public boolean isBool() {
-
 		return bool;
 	}
 
-	/**
-	 * @param bool
-	 *            the bool to set
-	 */
 	public void setBool(final boolean bool) {
-
 		this.bool = bool;
 	}
 
 	protected BaseClass showProps() {
-
 		final BaseClass obj = new BaseClass();
 		obj.setBool(true);
 		obj.setStr("Hello");
@@ -69,8 +62,6 @@ public class BaseClass {
 
 	@Override
 	public String toString() {
-
-		// TODO Auto-generated method stub
 		return "[ X = " + getX() + ", String = " + getStr() + ", Boolean = " + isBool() + "]";
 	}
 }

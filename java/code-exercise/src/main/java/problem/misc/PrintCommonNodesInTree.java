@@ -1,8 +1,8 @@
 package problem.misc;
 
-import dsa.datastructure.tree.BinarySearchTree;
-import dsa.datastructure.tree.BinaryTree;
-import dsa.datastructure.tree.Node;
+import dsa.tree.BinarySearchTree;
+import dsa.tree.BinaryTree;
+import dsa.tree.Node;
 
 import java.util.Stack;
 
