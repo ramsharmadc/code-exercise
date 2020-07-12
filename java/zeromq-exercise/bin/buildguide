@@ -1,0 +1,73 @@
+#! /bin/bash
+#
+#   Generates and uploads the Guide in main languages
+#
+function upload {
+    if [ ! -z "$APISITE_USER" ];  then
+        if [ -f .cache_$1 ]; then
+            OLD=`egrep $2.wd .cache_$1 | cut -f1 -d" "`
+        else
+            OLD=""
+        fi
+        NEW=`sha1sum $2.wd | cut -f1 -d" "`
+        if [ "$NEW" != "$OLD" ]; then
+            bin/wdput zguide $1 $2 "$3"
+            if [ -f .cache_$1 ]; then
+                egrep -v $2.wd .cache_$1 > x
+                mv x .cache_$1
+            fi
+            sha1sum $2.wd >> .cache_$1
+        fi
+    fi
+}
+
+function mkone {
+    export Z2W_LANG=$1
+    export Z2W_FORM=$2
+    bin/mkwikidot \
+        preface_web.txt \
+        chapter1.txt \
+        chapter2.txt \
+        chapter3.txt \
+        chapter4.txt \
+        chapter5.txt \
+        chapter6.txt \
+        chapter7.txt \
+        chapter8.txt \
+        postface.txt
+
+    echo "[[[$3:preface | Preface]]]"   > all.wd
+    echo "[[[$3:chapter1 | Chapter 1 - Basics]]]" >> all.wd
+    echo "[[[$3:chapter2 | Chapter 2 - Sockets and Patterns]]]" >> all.wd
+    echo "[[[$3:chapter3 | Chapter 3 - Advanced Request-Reply Patterns]]]" >> all.wd
+    echo "[[[$3:chapter4 | Chapter 4 - Reliable Request-Reply Patterns]]]" >> all.wd
+    echo "[[[$3:chapter5 | Chapter 5 - Advanced Pub-Sub Patterns]]]" >> all.wd
+    echo "[[[$3:chapter6 | Chapter 6 - The ZeroMQ Community]]]" >> all.wd
+    echo "[[[$3:chapter7 | Chapter 7 - Advanced Architecture using ZeroMQ]]]" >> all.wd
+    echo "[[[$3:chapter8 | Chapter 8 - A Framework for Distributed Computing]]]" >> all.wd
+    echo "[[[$3:postface | Postface]]]" >> all.wd
+
+    upload $3 preface  "Preface"
+    upload $3 chapter1 "Chapter One"
+    upload $3 chapter2 "Chapter Two"
+    upload $3 chapter3 "Chapter Three"
+    upload $3 chapter4 "Chapter Four"
+    upload $3 chapter5 "Chapter Five"
+    upload $3 chapter6 "Chapter Six"
+    upload $3 chapter7 "Chapter Seven"
+    upload $3 chapter8 "Chapter Eight"
+    upload $3 postface "Postface"
+    upload $3 all "ØMQ - The Guide"
+    sh ./upload.sh
+}
+
+mkone C      online page
+mkone Haxe   online hx
+mkone Lua    online lua
+mkone Java   online java
+mkone Python online py
+mkone PHP    online php
+mkone C#     online cs
+upload main scoreboard "Language scoreboard"
+
+rm *.wd wdtemp.txt upload.sh

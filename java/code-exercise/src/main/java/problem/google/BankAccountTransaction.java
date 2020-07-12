@@ -12,6 +12,10 @@ public class BankAccountTransaction {
 		return fees > d ? "upfront" : "fee";
 	}
 
+	private void calculatesTheYearlyTotal(){
+		System.out.println("Yearly total = "+34324);
+	}
+
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int q = in.nextInt();

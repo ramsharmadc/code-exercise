@@ -18,8 +18,8 @@ public class Test {
 		// System.out.println(listCumMap.get(2));
 		// System.out.println(listCumMap);
 
-		for (Iterator<String> itr = listCumMap.iterator(); itr.hasNext();) {
-			System.out.println(itr.next());
+		for (String s : listCumMap) {
+			System.out.println(s);
 			// itr.remove();
 		}
 
