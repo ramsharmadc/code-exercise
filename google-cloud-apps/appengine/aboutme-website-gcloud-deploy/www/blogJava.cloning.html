@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="codekaro.com">
+    <meta name="author" content="simpleapps.com">
+
+    <title>simpleapps.com/blog</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/hover.zoom.js"></script>
+    <script src="js/hover.zoom.conf.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="js/AppController.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header Section. Should be same for every page. -->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    Blogging
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://github.com/zzramsharma" target="_blank"><i class="fa fa-github"></i><span
+                                class="visible-xs-inline visible-sm-inline"></span></a>
+                    </li>
+                    <li><a href="http://in.linkedin.com/in/ramsharmadc" target="_blank"><i
+                                class="fa fa-linkedin-square"></i><span class="visible-xs-inline visible-sm-inline">
+                            </span></a>
+                    </li>
+                    <li><a href="contact.html" target="_blank"><i class="fa fa-envelope"></i><span
+                                class="visible-xs-inline visible-sm-inline"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- +++++ Welcome Section +++++ -->
+    <div id="ww">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-0 left">
+
+                    <div class="col-lg navbar-left">
+                        <h3>Cloning in Java</h3>
+                        <ba>Ram Sharma, </ba>
+                        <bt>13th July 2020</bt>
+                    </div>
+
+                    <div class="col-lg navbar-right">
+
+                        <bq>
+                            <br />
+                            Cloning of an object in java, refers to creation of exact copy of such an object.
+                            Cloning creates a new instance of the class of the given object and initializes
+                            all its fields with exactly the contents of the corresponding fields of this object.
+
+                            <br />
+                            <br />
+
+                            The object cloning is a way to create an exact copy of an object.
+                            For this purpose, the clone() method of an object class is used to clone an object.
+                            The Cloneable interface must be implemented by a class whose object clone to create.
+                            If we do not implement Cloneable interface, clone() method generates
+                            CloneNotSupportedException.
+
+                            The clone() method saves the extra processing task for creating the exact copy of an object.
+                            If we perform it by using the new keyword, it will take a lot of processing to be performed,
+                            so we can use object cloning.
+
+                            <br />
+                            <br />
+                            <h5>Using Assignment Operator to create copy of reference variable</h5>
+                            In Java, there is no operator to create copy of an object. Unlike C++, in Java,
+                            if we use assignment operator then it will create a copy of reference variable and not the
+                            object.
+                            This can be explained by taking an example. Following program demonstrates the same
+
+                            <br />
+                            <br />
+                            <h5>Syntax</h5>
+                            <code>protected Object clone() throws CloneNotSupportedException</code>
+
+                            <br />
+                            <br />
+                            <h5>Example</h5>
+                            <code>
+                                public class EmployeeTest implements Cloneable {
+                                <br/>
+                                int id;
+                                <br/>
+                                String name = "";
+                                <br/>
+                                Employee(int id, String name) {
+                                    <br/>
+                                   this.id = id;
+                                   <br/>
+                                   this.name = name;
+                                   <br/>
+                                }
+                                <br/>
+                                <br/>
+                                public Employee clone() throws CloneNotSupportedException {
+                                    <br/>
+                                   return (Employee)super.clone();
+                                   <br/>
+                                }
+                                <br/>
+                                <br/>
+                                public static void main(String[] args) {
+                                    <br/>
+                                   Employee emp = new Employee(115, "Raja");
+                                   <br/>
+                                   System.out.println(emp.name);
+                                   <br/>
+                                   try {
+                                    <br/>
+                                      Employee emp1 = emp.clone();
+                                      <br/>
+                                      System.out.println(emp1.name);
+                                      <br/>
+                                   } catch(CloneNotSupportedException cnse) {
+                                    <br/>
+                                      cnse.printStackTrace();
+                                      <br/>
+                                   }<br/>
+                                }<br/>
+                             }</code>
+                        </bq>
+
+                        <code>
+
+
+
+                        </code>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
