@@ -1,7 +1,0 @@
-{
-   <socketcall_sendto>
-   Memcheck:Param
-   socketcall.sendto(msg)
-   fun:send
-   ...
-}
