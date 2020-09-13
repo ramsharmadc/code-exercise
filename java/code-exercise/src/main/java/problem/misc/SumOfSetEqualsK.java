@@ -8,8 +8,6 @@ import java.util.Stack;
 
 /**
  * find all set of elements in an array with sum equal to k(given)
- * 
- * @author lenovo
  */
 public class SumOfSetEqualsK {
 

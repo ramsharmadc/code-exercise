@@ -5,7 +5,6 @@ package problem.misc;
  * string in place. For eg. "Today is the day" -> "Today ishe ". Also give test
  * cases.
  * 
- * @author lenovo
  */
 public class RemoveAlternateDuplicate {
 

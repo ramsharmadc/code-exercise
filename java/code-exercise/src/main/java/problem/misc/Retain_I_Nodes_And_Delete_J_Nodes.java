@@ -1,8 +1,6 @@
 package problem.misc;
 
 /**
- * @author ramsharma
- * @since 06/08/2016
  */
 public class Retain_I_Nodes_And_Delete_J_Nodes {
 

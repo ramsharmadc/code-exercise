@@ -4,7 +4,6 @@ package problem.misc;
  * Implement division without using division operator in log(n) time. solution:
  * use bitwise shifting
  * 
- * @author ramsh
  */
 public class DivisionWithoutDivisionOperator {
 

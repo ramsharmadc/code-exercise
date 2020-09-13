@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * strings that match this pattern Example : 1?00?101 -> [10000101, 10001101,
  * 11000101, 11001101]
  * 
- * @author ram.sharma
  */
 public class CreateStringsFromPatterns {
 

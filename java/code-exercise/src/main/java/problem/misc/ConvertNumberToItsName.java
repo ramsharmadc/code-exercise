@@ -5,8 +5,10 @@ import java.util.Map;
 
 public class ConvertNumberToItsName {
 
-	private final static String[] constantStrings = { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
-			"Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
+	private final static String[] constantStrings =
+			{ "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+			"Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen",
+					"Fifteen", "Sixteen", "Seventeen",
 			"Eighteen", "Nineteen" };
 
 	public static String convertNumberToItsName(final Integer i) {

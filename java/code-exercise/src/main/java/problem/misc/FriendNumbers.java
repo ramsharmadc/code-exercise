@@ -11,7 +11,6 @@ package problem.misc;
  * containing the count of pairs of number that are friendly. Example Input: 2 5
  * 2837 2818 654 35 931 5 183 665 908 774 362 Output: 6 3
  * 
- * @author Lenovo
  */
 
 public class FriendNumbers {

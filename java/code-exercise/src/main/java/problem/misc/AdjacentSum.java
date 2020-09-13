@@ -1,6 +1,7 @@
 package problem.misc;
 
 public class AdjacentSum {
+
 	private static final int ADJACENT = 3;
 	private static int[] input = new int[] { 5, 6, 9, 2, 8, 7, 6 };
 	private static int start_index = -1;

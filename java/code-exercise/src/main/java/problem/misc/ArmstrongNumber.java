@@ -8,7 +8,6 @@ import java.util.Scanner;
  * third power is equal to the number ! itself. For example, 371 is an Armstrong
  * number, since ! 3**3 + 7**3 + 1**3 = 371.
  * 
- * @author ramsh
  */
 public class ArmstrongNumber {
 	public static void main(final String[] args) {

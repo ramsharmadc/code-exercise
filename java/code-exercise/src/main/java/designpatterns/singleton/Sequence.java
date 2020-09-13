@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * singleton.
  */
 public class Sequence {
+
     private static final Sequence instance = new Sequence();
     private static final AtomicInteger counter = new AtomicInteger(0);
 

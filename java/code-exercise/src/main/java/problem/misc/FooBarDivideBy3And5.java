@@ -8,7 +8,6 @@ package problem.misc;
  * number. for example FooBar(15) should print as follows: 1 2 Foo 4 Bar Foo 7 8
  * Foo Bar 11 Foo 13 14 FooBar
  * 
- * @author lenovo
  */
 public class FooBarDivideBy3And5 {
 

@@ -12,7 +12,6 @@ import java.util.Set;
  * 
  * The method should minimize the number of intermediate conversions.
  * 
- *
  */
 
 public class CurrencyExchange {
@@ -60,7 +59,8 @@ public class CurrencyExchange {
 	}
 
 	private enum Conversation {
-		EUR2USD(0, "EUR2USD"), USD2GBP(1, "USD2GBP"), GBP2AUD(2, "GBP2AUD"), AUD2JPY(3, "AUD2JPY"),
+		EUR2USD(0, "EUR2USD"), USD2GBP(1, "USD2GBP"),
+		GBP2AUD(2, "GBP2AUD"), AUD2JPY(3, "AUD2JPY"),
 		GBP2JPY(4, "GBP2JPY"), JPY2INR(5, "JPY2INR");
 
 		int n;

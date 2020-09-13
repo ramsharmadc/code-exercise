@@ -39,7 +39,7 @@ public class Palindrome {
 		try (
 				// auto closeable resources
 				final Scanner inputScanner = new Scanner(new FileInputStream(testFile));
-				final FileWriter outputWriter = new FileWriter(testFile, true);) {
+				final FileWriter outputWriter = new FileWriter(testFile, true)) {
 			// append output section to the file
 			outputWriter.write("\n#output\n");
 			String nxtLiteral;
@@ -57,7 +57,7 @@ public class Palindrome {
 						continue;
 
 					// take the literal as input an test
-					outputWriter.write(Boolean.toString(palindromeChecker.isPalindrome(nxtLiteral)) + "\n");
+					outputWriter.write(palindromeChecker.isPalindrome(nxtLiteral) + "\n");
 				}
 			}
 		} catch (FileNotFoundException fnfe) {

@@ -21,7 +21,6 @@ public class SampleSingletonClass {
 
 	public SampleSingletonClass() { // if the constructor made private, class
 									// can not be extended
-
 	}
 
 	public synchronized SampleSingletonClass getInstance() {

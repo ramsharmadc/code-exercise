@@ -9,7 +9,6 @@ import java.util.TreeSet;
  * write a function to return that integer. ex [2,2,3,3,4,4,4,5,5] = 4 and
  * [2,2,2,3,3,3,3,4,4,4] = 3
  * 
- * @author lenovo
  */
 
 public class MismatchPattern {

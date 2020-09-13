@@ -16,7 +16,7 @@ public class RepeatOneStringTillContainsSecodString {
         System.out.println((count2 == 0 ? false : true) + " : " + count2);
     }
 
-    private static int ifRepeatedAContainsB(String s1, String s2) {
+    private static final int ifRepeatedAContainsB(String s1, String s2) {
         int count = -1;
         for (int i = 0; i < 5; i++) {
             System.out.println("i=" + i + " String=" + s1 + " target=" + s2);
