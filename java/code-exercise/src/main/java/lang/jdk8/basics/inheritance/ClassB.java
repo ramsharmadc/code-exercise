@@ -6,11 +6,11 @@ public class ClassB extends ClassA {
 		System.out.println("met1OfB()");
 	}
 
-	@Override
+	/*@Override
 	protected void met1OfA() {
 		System.out.println("Overriding in ClassB");
 		super.met1OfA();
-	}
+	}*/
 
 	@Override
 	public void met2OfA() {

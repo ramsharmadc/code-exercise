@@ -14,6 +14,5 @@ public class TestGenericsClass {
 
 		System.out.println(stringVector.getClass() == intVector.getClass());
 		System.out.println(stringVector.getClass().equals(intVector.getClass()));
-
 	}
 }

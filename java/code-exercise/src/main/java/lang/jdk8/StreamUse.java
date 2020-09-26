@@ -9,7 +9,11 @@ import java.util.stream.Collectors;
 public class StreamUse {
 
     public static void main(String[] args) {
+        StreamUse s = new StreamUse();
+        s.method();
+    }
 
+    public void method() {
         Map<String, List<String>> phonNumbrs = new HashMap<>();
         phonNumbrs.put("Ram", Arrays.asList("0973", "32123", "4334"));
         phonNumbrs.put("Rayon", Arrays.asList("0973", "32123", "4334"));
@@ -24,6 +28,7 @@ public class StreamUse {
                         collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue()));
 
         filteredNumbers.forEach((k, v) -> {
+                    this.method();
                     System.out.print("Numbers of " + k + " :: {");
                     v.forEach(v1 -> System.out.print(v1 + " "));
                     System.out.println("}");

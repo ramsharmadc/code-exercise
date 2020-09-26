@@ -6,17 +6,10 @@ import java.util.List;
 public class TestGeneric {
 
 	public static <T> List<T> getList() {
-
 		return new ArrayList<T>();
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-
-		// TODO Auto-generated method stub
-
 		List<Integer> ints = new ArrayList<Integer>();
 		ints.add(1);
 		ints.add(2);
@@ -25,9 +18,9 @@ public class TestGeneric {
 		// double dbl = sum(nums); // ok
 
 		// below adds not allowed --- If it is extends you can't add
-		/*
-		 * nums.add(3.14); nums.add(3); nums.add(new Integer(3)); // compile-time error
-		 */
+//		 nums.add(3.14);
+//		 nums.add(3);
+//		 nums.add(new Integer(3)); // compile-time error
 
 		// now this is okay
 		nums.add(null);

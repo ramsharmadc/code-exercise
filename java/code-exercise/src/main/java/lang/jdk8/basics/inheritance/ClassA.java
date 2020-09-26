@@ -2,6 +2,8 @@ package lang.jdk8.basics.inheritance;
 
 public class ClassA {
 
+	protected int x;
+
 	protected void met1OfA() {
 		System.out.println("met1OfA()");
 	}
