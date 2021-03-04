@@ -1,36 +1,37 @@
 package dsa.graph;
 
 public class Edge {
-	private Vertex to;
-	private Vertex from;
-	private int weight;
 
-	public Edge(Vertex to, Vertex from) {
-		this.to = to;
-		this.from = from;
-	}
+    private Vertex to;
+    private Vertex from;
+    private int weight;
 
-	public Vertex getTo() {
-		return to;
-	}
+    public Edge(Vertex to, Vertex from) {
+        this.to = to;
+        this.from = from;
+    }
 
-	public void setTo(Vertex to) {
-		this.to = to;
-	}
+    public Vertex getTo() {
+        return to;
+    }
 
-	public Vertex getFrom() {
-		return from;
-	}
+    public void setTo(Vertex to) {
+        this.to = to;
+    }
 
-	public void setFrom(Vertex from) {
-		this.from = from;
-	}
+    public Vertex getFrom() {
+        return from;
+    }
 
-	public int getWeight() {
-		return weight;
-	}
+    public void setFrom(Vertex from) {
+        this.from = from;
+    }
 
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 }

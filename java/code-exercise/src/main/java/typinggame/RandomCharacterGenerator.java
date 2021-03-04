@@ -35,7 +35,7 @@ public class RandomCharacterGenerator extends Thread implements CharacterSource 
 
     @Override
     public void nextCharacter() {
-        characterEventHandler.fireNewCharacter(this, (int) chars[random.nextInt(chars.length)]);
+        characterEventHandler.fireNewCharacter(this, chars[random.nextInt(chars.length)]);
     }
 
     public void run() {

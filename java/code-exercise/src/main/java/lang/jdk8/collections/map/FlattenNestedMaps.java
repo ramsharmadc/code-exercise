@@ -8,7 +8,7 @@ public class FlattenNestedMaps {
 
         try {
             String s = (String) Class.forName("java.lang.String").newInstance();
-            s=("Class Loaded using forName");
+            s = ("Class Loaded using forName");
             System.out.println("s is -> " + s);
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -58,9 +58,9 @@ public class FlattenNestedMaps {
         map4.put("L4", list2);
 
         StringBuilder str = new StringBuilder("{\n");
-        StringBuilder keyStr = new StringBuilder("");
+        StringBuilder keyStr = new StringBuilder();
         List<String> keyPath = new LinkedList<>();
-//        flatMap(map1, str, keyStr);
+        // flatMap(map1, str, keyStr);
         flatMap(map1, str, keyPath);
         str.append("}");
         System.out.print(str);
@@ -96,7 +96,8 @@ public class FlattenNestedMaps {
                 keyPath.remove(keyPath.size() - 1);
             } else if (e.getValue() instanceof List) {
                 for (int i = 0; i < ((List) e.getValue()).size(); i++) {
-                    str.append("\t{key : " + preparePath(keyPath, e.getKey() + "[" + i + "]") + "}, ");
+                    str.append(
+                            "\t{key : " + preparePath(keyPath, e.getKey() + "[" + i + "]") + "}, ");
                     str.append("{value : " + ((List) e.getValue()).get(i) + "}\n");
                 }
             } else {

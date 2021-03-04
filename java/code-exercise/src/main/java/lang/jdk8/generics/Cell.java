@@ -5,51 +5,42 @@ import java.util.List;
 
 public class Cell<T> {
 
-	private static int count = 0;
-	private final int id;
-	private final T value;
+    private static int count = 0;
+    private final int id;
+    private final T value;
 
-	// private static List<T> values = new ArrayList<T>(); // illegal
+    // private static List<T> values = new ArrayList<T>(); // illegal
 
-	public Cell(final T value) {
+    public Cell(final T value) {
+        this.value = value;
+        id = nextId();
+    }
 
-		this.value = value;
-		id = nextId();
-	}
+    public static synchronized int getCount() {
+        return count;
+    }
 
-	public static synchronized int getCount() {
+    // public static List<T> getValues() { return new LinkedList();} // illegal
+    public static List<Object> getValues() {
+        return new LinkedList<>();
+    } // it's fine
 
-		return count;
-	}
+    public static void main(final String[] args) {
+        final Cell<String> strCell = new Cell<String>("value");
+        final Cell<Integer> intCell = new Cell<Integer>(1);
+        System.out.println(strCell.getId() + ", " + intCell.getId());
+        System.out.println(Cell.getCount());
+    }
 
-	// public static List<T> getValues() { return new LinkedList();} // illegal
-	public static List<Object> getValues() {
+    private static synchronized int nextId() {
+        return count++;
+    }
 
-		return new LinkedList<Object>();
-	} // it's fine
+    public int getId() {
+        return id;
+    }
 
-	public static void main(final String[] args) {
-
-		final Cell<String> strCell = new Cell<String>("value");
-		final Cell<Integer> intCell = new Cell<Integer>(1);
-
-		System.out.println(strCell.getId() + ", " + intCell.getId());
-
-		System.out.println(Cell.getCount());
-	}
-
-	private static synchronized int nextId() {
-
-		return count++;
-	}
-
-	public int getId() {
-
-		return id;
-	}
-
-	public T getValue() {
-
-		return value;
-	}
+    public T getValue() {
+        return value;
+    }
 }

@@ -16,6 +16,10 @@ public class SwingTypeTester extends JFrame implements CharacterSource {
         initComponents();
     }
 
+    public static void main(String[] args) {
+        new SwingTypeTester().show();
+    }
+
     private void initComponents() {
         handler = new CharacterEventHandler();
         displayCanvas = new CharacterDisplayCanvas();
@@ -39,7 +43,7 @@ public class SwingTypeTester extends JFrame implements CharacterSource {
             public void keyPressed(KeyEvent ke) {
                 char c = ke.getKeyChar();
                 if (c != KeyEvent.CHAR_UNDEFINED)
-                    newCharacter((int) c);
+                    newCharacter(c);
             }
         });
         startButton.addActionListener(new ActionListener() {
@@ -78,9 +82,5 @@ public class SwingTypeTester extends JFrame implements CharacterSource {
 
     public void nextCharacter() {
         throw new IllegalStateException("We don't produce on demand");
-    }
-
-    public static void main(String args[]) {
-        new SwingTypeTester().show();
     }
 }

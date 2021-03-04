@@ -1,6 +1,6 @@
 package designpatterns.observer;
 
-public interface DisplayElement extends Observer{
+public interface DisplayElement extends Observer {
 
     void display();
 }

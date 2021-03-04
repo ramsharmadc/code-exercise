@@ -2,35 +2,36 @@ package lang.jdk8;
 
 class Student {
 
-	@Override
-	public String toString() {
+    @Override
+    public String toString() {
 
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
 }
+
 
 public class TestClass {
 
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
 
-		final int x;
-		x = 20;
-		// args=new String[]{"final array change"};
+        final int x;
+        x = 20;
+        // args=new String[]{"final array change"};
 
-		System.out.println(x);
+        System.out.println(x);
 
-		final String str = "XYZ";
-		// System.out.println(str.compareTo(new Student())); // compile error
-		System.out.println(str.compareTo("Student"));
+        final String str = "XYZ";
+        // System.out.println(str.compareTo(new Student())); // compile error
+        System.out.println(str.compareTo("Student"));
 
-		System.out.println("abcd".compareTo("wxyz"));
+        System.out.println("abcd".compareTo("wxyz"));
 
-		System.out.println(1 << 10);
-	}
+        System.out.println(1 << 10);
+    }
 
-	void changeFinalParam(final Object obj) {
-		// obj = new Object();
-	}
+    void changeFinalParam(final Object obj) {
+        // obj = new Object();
+    }
 
 }

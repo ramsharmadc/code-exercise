@@ -2,40 +2,40 @@ package designpatterns.factorypattern;
 
 public class PepperPizza implements Pizza {
 
-	private PepperPizza pepperPizza = null;
+    private PepperPizza pepperPizza = null;
 
-	public PepperPizza() {
+    public PepperPizza() {
 
-		pepperPizza = new PepperPizza();
-	}
+        pepperPizza = new PepperPizza();
+    }
 
-	@Override
-	public void bake() {
+    @Override
+    public void bake() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void box() {
+    @Override
+    public void box() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void cut() {
+    @Override
+    public void cut() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public Pizza prepare() {
-		return pepperPizza;
+    @Override
+    public Pizza prepare() {
+        return pepperPizza;
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

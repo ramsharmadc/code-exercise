@@ -10,10 +10,10 @@ public class RemoveUnNecessarySpaces {
     }
 
     private static String removeUnnecessaryStrings(String s) {
-        /*StringBuffer tokens = new StringBuffer();
-        for (String s1 : s.split(" "))
-            tokens.append(s1);
-        return tokens.toString();*/
+        /*
+         * StringBuffer tokens = new StringBuffer(); for (String s1 : s.split(" "))
+         * tokens.append(s1); return tokens.toString();
+         */
 
         StringBuilder sb = new StringBuilder();
         int i = 0;

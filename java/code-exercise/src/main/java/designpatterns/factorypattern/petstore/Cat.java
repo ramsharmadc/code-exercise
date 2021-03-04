@@ -2,8 +2,8 @@ package designpatterns.factorypattern.petstore;
 
 public class Cat implements Pet {
 
-    private String name;
-    private String type;
+    private final String name;
+    private final String type;
 
     public Cat(String name) {
         this.name = name;

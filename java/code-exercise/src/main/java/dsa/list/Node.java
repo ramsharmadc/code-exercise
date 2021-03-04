@@ -2,101 +2,101 @@ package dsa.list;
 
 public class Node<T> {
 
-	private T value;
-	private Node<T> next;
-	private Node<T> previous;
-	private Node<T> head;
+    private T value;
+    private Node<T> next;
+    private Node<T> previous;
+    private Node<T> head;
 
-	// attribs for skiplist node
-	private Node<T> expressWayNode;
-	private Node<T> subWayNode;
+    // attribs for skiplist node
+    private Node<T> expressWayNode;
+    private Node<T> subWayNode;
 
-	public Node() {
+    public Node() {
 
-		this.value = null;
-		this.next = null;
-		this.previous = null;
-		this.head = null;
-	}
+        this.value = null;
+        this.next = null;
+        this.previous = null;
+        this.head = null;
+    }
 
-	public Node(final Node<T> node) {
+    public Node(final Node<T> node) {
 
-		this.value = node.value;
-		this.next = node.next;
-		this.previous = node.previous;
-		this.head = node.head;
-	}
+        this.value = node.value;
+        this.next = node.next;
+        this.previous = node.previous;
+        this.head = node.head;
+    }
 
-	public Node(final T value) {
+    public Node(final T value) {
 
-		this.value = value;
-		this.next = null;
-		this.previous = null;
-		this.head = null;
-	}
+        this.value = value;
+        this.next = null;
+        this.previous = null;
+        this.head = null;
+    }
 
-	public Node<T> getHead() {
+    public Node<T> getHead() {
 
-		return head;
-	}
+        return head;
+    }
 
-	public void setHead(final Node<T> head) {
+    public void setHead(final Node<T> head) {
 
-		this.head = head;
-	}
+        this.head = head;
+    }
 
-	public Node<T> getNext() {
+    public Node<T> getNext() {
 
-		return next;
-	}
+        return next;
+    }
 
-	public void setNext(final Node<T> next) {
+    public void setNext(final Node<T> next) {
 
-		this.next = next;
-	}
+        this.next = next;
+    }
 
-	public Node<T> getPrevious() {
+    public Node<T> getPrevious() {
 
-		return previous;
-	}
+        return previous;
+    }
 
-	public void setPrevious(final Node<T> previous) {
+    public void setPrevious(final Node<T> previous) {
 
-		this.previous = previous;
-	}
+        this.previous = previous;
+    }
 
-	public T getValue() {
+    public T getValue() {
 
-		return value;
-	}
+        return value;
+    }
 
-	public void setValue(final T value) {
+    public void setValue(final T value) {
 
-		this.value = value;
-	}
+        this.value = value;
+    }
 
-	protected Node<T> getExpressWayNode() {
+    protected Node<T> getExpressWayNode() {
 
-		return this.expressWayNode;
-	}
+        return this.expressWayNode;
+    }
 
-	protected void setExpressWayNode(Node<T> expressWayNode) {
+    protected void setExpressWayNode(Node<T> expressWayNode) {
 
-		this.expressWayNode = expressWayNode;
-	}
+        this.expressWayNode = expressWayNode;
+    }
 
-	protected Node<T> getSubWayNode() {
+    protected Node<T> getSubWayNode() {
 
-		return this.subWayNode;
-	}
+        return this.subWayNode;
+    }
 
-	protected void setSubWayNode(Node<T> subWayNode) {
+    protected void setSubWayNode(Node<T> subWayNode) {
 
-		this.subWayNode = subWayNode;
-	}
+        this.subWayNode = subWayNode;
+    }
 
-	@Override
-	public String toString() {
-		return "Node-" + value;
-	}
+    @Override
+    public String toString() {
+        return "Node-" + value;
+    }
 }

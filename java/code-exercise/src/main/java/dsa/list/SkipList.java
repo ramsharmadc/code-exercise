@@ -2,82 +2,82 @@ package dsa.list;
 
 public class SkipList<T> implements ListADT<T> {
 
-	private Node<T> head;
+    private final Node<T> head;
 
-	public SkipList() {
+    public SkipList() {
 
-		head = null;
-	}
+        head = null;
+    }
 
-	@Override
-	public void addAll(LinkedList<T> list) throws Exception {
+    @Override
+    public void addAll(LinkedList<T> list) throws Exception {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void delete(int index) throws Exception {
+    @Override
+    public void delete(int index) throws Exception {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public Node<T> find(Node<T> head, int n) {
+    @Override
+    public Node<T> find(Node<T> head, int n) {
 
-		// TODO Auto-generated method stub
-		return null;
-	}
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public void insert(T val) {
+    @Override
+    public void insert(T val) {
 
-		if (true) {
+        if (true) {
 
-		}
+        }
 
-	}
+    }
 
-	@Override
-	public void insert(T[] nodes) {
+    @Override
+    public void insert(T[] nodes) {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public Node<T> insertAt(T val, int pos) throws Exception {
+    @Override
+    public Node<T> insertAt(T val, int pos) throws Exception {
 
-		// TODO Auto-generated method stub
-		return null;
-	}
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public int length() throws Exception {
+    @Override
+    public int length() throws Exception {
 
-		// TODO Auto-generated method stub
-		return 0;
-	}
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	public void reverse() {
+    @Override
+    public void reverse() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void showList() {
+    @Override
+    public void showList() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void sort() throws Exception {
+    @Override
+    public void sort() throws Exception {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 }

@@ -5,67 +5,67 @@ import java.util.Scanner;
 
 public class Palindrome {
 
-	public boolean isPalindrome(String instr) {
+    /**
+     * Driver program for testing the Palindrome. Reads libs as input from a test file
+     * ".\libs\Palindrome.txt" Writes output at the end of the same file
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        final File directory = new File("./");
+        final String testFile = ".\\libs\\Palindrome.txt";
+        final Palindrome palindromeChecker = new Palindrome();
+        try (
+                // auto closeable resources
+                final Scanner inputScanner = new Scanner(new FileInputStream(testFile));
+                final FileWriter outputWriter = new FileWriter(testFile, true)) {
+            // append output section to the file
+            outputWriter.write("\n#output\n");
+            String nxtLiteral;
 
-		// a null Or an empty string doesn't qualify
-		if (instr == null || instr.isEmpty())
-			return false;
+            while (inputScanner.hasNext()) {
+                nxtLiteral = inputScanner.nextLine();
 
-		// a single character string is a palindrome
-		if (instr.length() == 1)
-			return true;
+                if (nxtLiteral != null && !nxtLiteral.isEmpty()) {
+                    // break when output section begins
+                    if (nxtLiteral.equalsIgnoreCase("#output"))
+                        break;
 
-		int lenOffset = instr.length() - 1;
-		int midIndex = instr.length() / 2;
+                    // skip comment
+                    if (nxtLiteral.charAt(0) == '#')
+                        continue;
 
-		// runs till the middle of the string, with complexity O(n)
-		for (int i = 0; i < midIndex; i++) {
-			if (instr.charAt(i) != instr.charAt(lenOffset - i))
-				return false;
-		}
-		return true;
-	}
+                    // take the literal as input an test
+                    outputWriter.write(palindromeChecker.isPalindrome(nxtLiteral) + "\n");
+                }
+            }
+        } catch (FileNotFoundException fnfe) {
+            System.out.println("Input file 'Palindrome.txt' not found at location - "
+                    + directory.getAbsolutePath() + "\\test\\");
+            System.out.println("Please refer README.txt for Palindrome");
+        } catch (IOException e) {
+            System.out.println("Some I/O error while handling files. Details - " + e.getMessage());
+        }
+    }
 
-	/**
-	 * Driver program for testing the Palindrome. Reads libs as input from a test
-	 * file ".\libs\Palindrome.txt" Writes output at the end of the same file
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		final File directory = new File("./");
-		final String testFile = ".\\libs\\Palindrome.txt";
-		final Palindrome palindromeChecker = new Palindrome();
-		try (
-				// auto closeable resources
-				final Scanner inputScanner = new Scanner(new FileInputStream(testFile));
-				final FileWriter outputWriter = new FileWriter(testFile, true)) {
-			// append output section to the file
-			outputWriter.write("\n#output\n");
-			String nxtLiteral;
+    public boolean isPalindrome(String instr) {
 
-			while (inputScanner.hasNext()) {
-				nxtLiteral = inputScanner.nextLine();
+        // a null Or an empty string doesn't qualify
+        if (instr == null || instr.isEmpty())
+            return false;
 
-				if (nxtLiteral != null && !nxtLiteral.isEmpty()) {
-					// break when output section begins
-					if (nxtLiteral.equalsIgnoreCase("#output"))
-						break;
+        // a single character string is a palindrome
+        if (instr.length() == 1)
+            return true;
 
-					// skip comment
-					if (nxtLiteral.charAt(0) == '#')
-						continue;
+        int lenOffset = instr.length() - 1;
+        int midIndex = instr.length() / 2;
 
-					// take the literal as input an test
-					outputWriter.write(palindromeChecker.isPalindrome(nxtLiteral) + "\n");
-				}
-			}
-		} catch (FileNotFoundException fnfe) {
-			System.out.println("Input file \'Palindrome.txt\' not found at location - " + directory.getAbsolutePath()
-					+ "\\test\\");
-			System.out.println("Please refer README.txt for Palindrome");
-		} catch (IOException e) {
-			System.out.println("Some I/O error while handling files. Details - " + e.getMessage());
-		}
-	}
+        // runs till the middle of the string, with complexity O(n)
+        for (int i = 0; i < midIndex; i++) {
+            if (instr.charAt(i) != instr.charAt(lenOffset - i))
+                return false;
+        }
+        return true;
+    }
 }

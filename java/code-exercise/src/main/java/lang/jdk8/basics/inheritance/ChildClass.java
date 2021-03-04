@@ -2,35 +2,34 @@ package lang.jdk8.basics.inheritance;
 
 public class ChildClass extends BaseClass {
 
-	private boolean child;
+    private boolean child;
 
-	/**
-	 * @return the isChild
-	 */
-	public boolean isChild() {
+    /**
+     * @return the isChild
+     */
+    public boolean isChild() {
 
-		return child;
-	}
+        return child;
+    }
 
-	/**
-	 * @param isChild
-	 *            the isChild to set
-	 */
-	public void setChild(final boolean isChild) {
+    /**
+     * @param isChild the isChild to set
+     */
+    public void setChild(final boolean isChild) {
 
-		child = isChild;
-	}
+        child = isChild;
+    }
 
-	@Override
-	protected BaseClass showProps() {
+    @Override
+    protected BaseClass showProps() {
 
-		final ChildClass obj = new ChildClass();
+        final ChildClass obj = new ChildClass();
 
-		obj.setChild(true);
-		obj.setX(30);
-		obj.setBool(false);
-		obj.setStr("Child String");
+        obj.setChild(true);
+        obj.setX(30);
+        obj.setBool(false);
+        obj.setStr("Child String");
 
-		return obj;
-	}
+        return obj;
+    }
 }

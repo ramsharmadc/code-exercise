@@ -30,8 +30,8 @@ public class SimpleExample {
         long count = artists.stream().filter(Artist::isFromLondon).count();
         System.out.println("London artists: " + count);
 
-        List<String> upperCaseNamedArtists = artists.stream().map(x ->
-                x.name.toUpperCase()).collect(Collectors.toList());
+        List<String> upperCaseNamedArtists =
+                artists.stream().map(x -> x.name.toUpperCase()).collect(Collectors.toList());
         System.out.println(upperCaseNamedArtists);
     }
 

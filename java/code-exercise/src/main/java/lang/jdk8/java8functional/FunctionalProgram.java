@@ -6,8 +6,8 @@ import java.util.stream.IntStream;
 
 public class FunctionalProgram {
 
-    public static Predicate<Integer> IsPrimePredicate = x ->
-            x > 1 && IntStream.range(2, x).noneMatch(y -> x % y == 0);
+    public static Predicate<Integer> IsPrimePredicate =
+            x -> x > 1 && IntStream.range(2, x).noneMatch(y -> x % y == 0);
     static Function<Integer, Integer> addOne = n -> n + 1;
     static Function<Integer, Integer> multiplyTen = n -> n * 10;
 

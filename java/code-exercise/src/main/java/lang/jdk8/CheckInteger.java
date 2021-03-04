@@ -2,10 +2,10 @@ package lang.jdk8;
 
 public class CheckInteger {
 
-	public static void main(String[] args) {
-		int i = 10;
-		Integer j = new Integer(10);
+    public static void main(String[] args) {
+        int i = 10;
+        Integer j = new Integer(10);
 
-		System.out.println(i == j);
-	}
+        System.out.println(i == j);
+    }
 }

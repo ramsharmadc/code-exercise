@@ -6,29 +6,29 @@ import java.util.List;
 
 public class IteratorConcept {
 
-	/**
-	 * @param args
-	 */
-	public static void main(final String[] args) {
+    /**
+     * @param args
+     */
+    public static void main(final String[] args) {
 
-		final List<Integer> list = new LinkedList<Integer>();
+        final List<Integer> list = new LinkedList<Integer>();
 
-		/*** HERE Iterator throws exception ***/
-		// Iterator<Integer> itr = list.iterator();
+        /*** HERE Iterator throws exception ***/
+        // Iterator<Integer> itr = list.iterator();
 
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
-		list.add(5);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
 
-		/*** HERE Iterator will work ***/
-		final Iterator<Integer> itr = list.iterator();
+        /*** HERE Iterator will work ***/
+        final Iterator<Integer> itr = list.iterator();
 
-		while (itr.hasNext()) {
-			System.out.println(itr.next());
-		}
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
 
-	}
+    }
 
 }

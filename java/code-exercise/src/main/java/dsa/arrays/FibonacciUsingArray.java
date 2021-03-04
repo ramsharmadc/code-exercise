@@ -12,9 +12,12 @@ public class FibonacciUsingArray {
 
     public static BigInteger fibonacci(int n, BigInteger[] res) {
         for (int i = 0; i < n; i++) {
-            if (i == 0) res[i] = BigInteger.ZERO;
-            else if (i == 1) res[i] = BigInteger.ONE;
-            else res[i] = res[i - 1].add(res[i - 2]);
+            if (i == 0)
+                res[i] = BigInteger.ZERO;
+            else if (i == 1)
+                res[i] = BigInteger.ONE;
+            else
+                res[i] = res[i - 1].add(res[i - 2]);
             System.out.println("i = " + i + ", Fin(" + (i + 1) + ") is " + res[i]);
         }
         return res[n - 1];

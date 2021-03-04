@@ -2,9 +2,9 @@ package dsa.algos.dynamicprogramming;
 
 public class EggDroppingProblem implements DynamicProgramming {
 
-    private static int floors = 10;
-    private static int eggs = 2;
-    private static int[][] dp = new int[eggs + 1][floors + 1];
+    private static final int floors = 10;
+    private static final int eggs = 2;
+    private static final int[][] dp = new int[eggs + 1][floors + 1];
 
     public static void main(String[] args) {
         for (int i = 0; i < dp.length; i++) {

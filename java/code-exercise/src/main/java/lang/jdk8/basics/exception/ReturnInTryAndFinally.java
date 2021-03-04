@@ -2,16 +2,16 @@ package lang.jdk8.basics.exception;
 
 public class ReturnInTryAndFinally {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		try {
+        try {
 
-			System.out.println("In try block..");
-			return;
-		} catch (Exception e) {
-			System.out.println("In catch block");
-		} finally {
-			System.out.println("Still in Finally");
-		}
-	}
+            System.out.println("In try block..");
+            return;
+        } catch (Exception e) {
+            System.out.println("In catch block");
+        } finally {
+            System.out.println("Still in Finally");
+        }
+    }
 }

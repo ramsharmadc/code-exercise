@@ -2,47 +2,47 @@ package lang.jdk8.basics.polymorphism;
 
 public class StaticMethodsChild extends StaticMethodsParent {
 
-	int r = 1;
+    int r = 1;
 
-	StaticMethodsChild(int e) {
+    StaticMethodsChild(int e) {
 
-		r = e;
-		System.out.println("child class :: " + r);
-	}
+        r = e;
+        System.out.println("child class :: " + r);
+    }
 
-	public static String getString() {
+    public static String getString() {
 
-		return "StaticMethodsChild class";
-	}
+        return "StaticMethodsChild class";
+    }
 
-	public String evenThis(StaticMethodsParent obj) {
+    public String evenThis(StaticMethodsParent obj) {
 
-		return "StaticMethodChild";
-	}
+        return "StaticMethodChild";
+    }
 
-	public int getNumber() {
+    public int getNumber() {
 
-		return 0;
-	}
+        return 0;
+    }
 
-	@Override
-	public Object getNumberFrom() {
+    @Override
+    public Object getNumberFrom() {
 
-		// TODO Auto-generated method stub
-		System.out.println("Child class method---" + r);
-		return r;
-	}
+        // TODO Auto-generated method stub
+        System.out.println("Child class method---" + r);
+        return r;
+    }
 
-	public Parent thisAlo() {
+    public Parent thisAlo() {
 
-		return new StaticMethodsParent();
-	}
+        return new StaticMethodsParent();
+    }
 
-	public Object thisCanbeOverloaded() {
+    public Object thisCanbeOverloaded() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-		return "";
+        return "";
 
-	}
+    }
 }

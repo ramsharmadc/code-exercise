@@ -12,10 +12,9 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class UseLock {
 
     public static void main(String[] args) {
-        /*for (int i = 0; i < 100; i++) {
-            new Thread(UseLock::startSomething).start();
-        }
-*/
+        /*
+         * for (int i = 0; i < 100; i++) { new Thread(UseLock::startSomething).start(); }
+         */
 
         ExecutorService threadExecutorService = Executors.newFixedThreadPool(2);
 
@@ -27,17 +26,18 @@ public class UseLock {
             final String iStr = String.valueOf(i);
             threadExecutorService.submit(() -> UseLock.readSomething(iStr, m1));
         }
-        /*for (int i = 0; i < 100; i++) {
-            final String iStr = String.valueOf(i);
-            threadExecutorService.submit(() -> UseLock.writeSomething(iStr, iStr + "_updated", m1));
-        }*/
+        /*
+         * for (int i = 0; i < 100; i++) { final String iStr = String.valueOf(i);
+         * threadExecutorService.submit(() -> UseLock.writeSomething(iStr, iStr + "_updated", m1));
+         * }
+         */
 
         Thread.setDefaultUncaughtExceptionHandler(Thread.getDefaultUncaughtExceptionHandler());
     }
 
     private static void startSomething() {
         Lock l1 = new ReentrantLock();
-//        l1.lock();
+        // l1.lock();
 
         // instead of lock() we can use tryLock()
         l1.tryLock();
@@ -59,8 +59,8 @@ public class UseLock {
         String value;
         l1.readLock().tryLock();
         try {
-            System.out.println("[" + Thread.currentThread().getId() +
-                    "] Reading repository:: " + (value = repository.get(key)));
+            System.out.println("[" + Thread.currentThread().getId() + "] Reading repository:: "
+                    + (value = repository.get(key)));
         } finally {
             l1.readLock().unlock();
         }
@@ -70,8 +70,8 @@ public class UseLock {
         ReadWriteLock l1 = new ReentrantReadWriteLock();
         l1.writeLock().tryLock();
         try {
-            System.out.println("[" + Thread.currentThread().getId() + "] Writing repository:: " +
-                    repository.put(key, value));
+            System.out.println("[" + Thread.currentThread().getId() + "] Writing repository:: "
+                    + repository.put(key, value));
         } finally {
             l1.writeLock().unlock();
         }

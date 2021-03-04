@@ -2,39 +2,39 @@ package designpatterns.factorypattern;
 
 public class GreekPizza implements Pizza {
 
-	private GreekPizza greekPizza = null;
+    private GreekPizza greekPizza = null;
 
-	public GreekPizza() {
+    public GreekPizza() {
 
-		greekPizza = new GreekPizza();
-	}
+        greekPizza = new GreekPizza();
+    }
 
-	@Override
-	public void bake() {
+    @Override
+    public void bake() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void box() {
+    @Override
+    public void box() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public void cut() {
+    @Override
+    public void cut() {
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 
-	@Override
-	public Pizza prepare() {
-		return greekPizza;
+    @Override
+    public Pizza prepare() {
+        return greekPizza;
 
-		// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
 
-	}
+    }
 }

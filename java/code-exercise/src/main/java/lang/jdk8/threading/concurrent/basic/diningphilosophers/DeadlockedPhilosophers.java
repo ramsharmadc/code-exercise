@@ -6,28 +6,28 @@ import java.util.concurrent.TimeUnit;
 
 public class DeadlockedPhilosophers {
 
-	/**
-	 * @param argsj
-	 * @throws InterruptedException
-	 */
-	public static void main(final String[] args) throws InterruptedException {
+    /**
+     * @param argsj
+     * @throws InterruptedException
+     */
+    public static void main(final String[] args) throws InterruptedException {
 
-		final int ponder = 5;
-		final int SIZE = 5;
+        final int ponder = 5;
+        final int SIZE = 5;
 
-		final ExecutorService exec = Executors.newCachedThreadPool();
+        final ExecutorService exec = Executors.newCachedThreadPool();
 
-		final Fork[] forks = new Fork[SIZE];
+        final Fork[] forks = new Fork[SIZE];
 
-		for (int i = 0; i < SIZE; i++) {
-			forks[i] = new Fork();
-		}
+        for (int i = 0; i < SIZE; i++) {
+            forks[i] = new Fork();
+        }
 
-		for (int j = 0; j < SIZE; j++) {
-			exec.execute(new Philosophers(forks[j], forks[((j + 1) % SIZE)], j, ponder));
-		}
+        for (int j = 0; j < SIZE; j++) {
+            exec.execute(new Philosophers(forks[j], forks[((j + 1) % SIZE)], j, ponder));
+        }
 
-		TimeUnit.MILLISECONDS.sleep(SIZE);
-		exec.shutdownNow();
-	}
+        TimeUnit.MILLISECONDS.sleep(SIZE);
+        exec.shutdownNow();
+    }
 }

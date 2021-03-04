@@ -5,9 +5,10 @@ public class DiameterOfTree {
     static int height(Node<Integer> node) {
 
         // tree is empty
-        if (node == null) return 0;
+        if (node == null)
+            return 0;
         if (node.getLeftNode() == null && node.getRightNode() == null)
-        return 0;
+            return 0;
 
         // add 1 at current level, and
         // go down and find max height out of left and right trees
@@ -53,6 +54,7 @@ public class DiameterOfTree {
         return Math.max((left_height + right_height + 1), Math.max(left_diameter, right_diameter));
     }
 }
+
 
 class BinaryTreeForTest<T> {
     private Node<T> root = null;

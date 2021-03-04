@@ -6,7 +6,7 @@ import java.util.*;
 public class Solution {
 
     @SuppressWarnings({"deprecation"})
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 
@@ -40,8 +40,8 @@ public class Solution {
 
         public int compare(Map.Entry<Character, Integer> _e1, Map.Entry<Character, Integer> _e2) {
 
-            Map.Entry<Character, Integer> e1 = (Map.Entry<Character, Integer>) _e1;
-            Map.Entry<Character, Integer> e2 = (Map.Entry<Character, Integer>) _e2;
+            Map.Entry<Character, Integer> e1 = _e1;
+            Map.Entry<Character, Integer> e2 = _e2;
 
             if (e1.getValue() > e2.getValue())
                 return 1;

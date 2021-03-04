@@ -2,15 +2,15 @@ package lang.jdk8.basics.polymorphism;
 
 public class ChildClass extends BaseClass {
 
-	@Override
-	public String getObject() {
+    @Override
+    public String getObject() {
 
-		return "";
-	}
+        return "";
+    }
 
-	@Override
-	public StaticMethodsChild getStaticMethod() {
+    @Override
+    public StaticMethodsChild getStaticMethod() {
 
-		return (StaticMethodsChild) super.getStaticMethod();
-	}
+        return (StaticMethodsChild) super.getStaticMethod();
+    }
 }

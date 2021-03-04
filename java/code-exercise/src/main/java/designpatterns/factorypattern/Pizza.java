@@ -2,11 +2,11 @@ package designpatterns.factorypattern;
 
 public interface Pizza<T> {
 
-	void bake();
+    void bake();
 
-	void box();
+    void box();
 
-	void cut();
+    void cut();
 
-	Pizza<T> prepare();
+    Pizza<T> prepare();
 }

@@ -2,63 +2,63 @@ package dsa.tree;
 
 public class ThreadedBTNode<T> extends Node<T> {
 
-	private boolean leftThread;
-	private boolean rightThread;
-	private Node<T> leftThreadNode;
-	private Node<T> rightThreadNode;
+    private boolean leftThread;
+    private boolean rightThread;
+    private Node<T> leftThreadNode;
+    private Node<T> rightThreadNode;
 
-	public ThreadedBTNode() {
+    public ThreadedBTNode() {
 
-		super();
-	}
+        super();
+    }
 
-	public ThreadedBTNode(Node<T> newNode) {
+    public ThreadedBTNode(Node<T> newNode) {
 
-		super(newNode.getValue());
-	}
+        super(newNode.getValue());
+    }
 
-	public ThreadedBTNode(T val) {
+    public ThreadedBTNode(T val) {
 
-		super(val);
-	}
+        super(val);
+    }
 
-	public boolean isLeftThread() {
+    public boolean isLeftThread() {
 
-		return this.leftThread;
-	}
+        return this.leftThread;
+    }
 
-	public void setLeftThread(boolean leftThread) {
+    public void setLeftThread(boolean leftThread) {
 
-		this.leftThread = leftThread;
-	}
+        this.leftThread = leftThread;
+    }
 
-	public boolean isRightThread() {
+    public boolean isRightThread() {
 
-		return this.rightThread;
-	}
+        return this.rightThread;
+    }
 
-	public void setRightThread(boolean rightThread) {
+    public void setRightThread(boolean rightThread) {
 
-		this.rightThread = rightThread;
-	}
+        this.rightThread = rightThread;
+    }
 
-	protected Node<T> getLeftThreadNode() {
+    protected Node<T> getLeftThreadNode() {
 
-		return this.leftThreadNode;
-	}
+        return this.leftThreadNode;
+    }
 
-	protected void setLeftThreadNode(Node<T> leftThreadNode) {
+    protected void setLeftThreadNode(Node<T> leftThreadNode) {
 
-		this.leftThreadNode = leftThreadNode;
-	}
+        this.leftThreadNode = leftThreadNode;
+    }
 
-	protected Node<T> getRightThreadNode() {
+    protected Node<T> getRightThreadNode() {
 
-		return this.rightThreadNode;
-	}
+        return this.rightThreadNode;
+    }
 
-	protected void setRightThreadNode(Node<T> rightThreadNode) {
+    protected void setRightThreadNode(Node<T> rightThreadNode) {
 
-		this.rightThreadNode = rightThreadNode;
-	}
+        this.rightThreadNode = rightThreadNode;
+    }
 }

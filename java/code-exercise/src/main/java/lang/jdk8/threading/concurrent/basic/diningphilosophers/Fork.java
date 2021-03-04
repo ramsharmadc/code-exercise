@@ -2,33 +2,33 @@ package lang.jdk8.threading.concurrent.basic.diningphilosophers;
 
 public class Fork {
 
-	private boolean free;
+    private boolean free;
 
-	public synchronized void dropTheFork() throws InterruptedException {
+    public synchronized void dropTheFork() throws InterruptedException {
 
-		setFree();
-	}
+        setFree();
+    }
 
-	public void forkInUse() {
+    public void forkInUse() {
 
-		free = false;
-	}
+        free = false;
+    }
 
-	public synchronized void grabTheFork() throws InterruptedException {
+    public synchronized void grabTheFork() throws InterruptedException {
 
-		while (!isFree()) {
-			wait();
-		}
-		forkInUse();
-	}
+        while (!isFree()) {
+            wait();
+        }
+        forkInUse();
+    }
 
-	public boolean isFree() {
+    public boolean isFree() {
 
-		return free;
-	}
+        return free;
+    }
 
-	public void setFree() {
+    public void setFree() {
 
-		free = true;
-	}
+        free = true;
+    }
 }

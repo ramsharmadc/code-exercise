@@ -2,32 +2,32 @@ package lang.jdk8.view;
 
 public class ClassForView {
 
-	static int id;
-	static StringBuilder name = new StringBuilder();
+    static int id;
+    static StringBuilder name = new StringBuilder();
 
-	public ClassForView(int i, String str) {
+    public ClassForView(int i, String str) {
 
-		ClassForView.id = i;
-		ClassForView.name.append(str);
-	}
+        ClassForView.id = i;
+        ClassForView.name.append(str);
+    }
 
-	public static int getId() {
+    public static int getId() {
 
-		return id;
-	}
+        return id;
+    }
 
-	public static void setId(int id) {
+    public static void setId(int id) {
 
-		ClassForView.id = id;
-	}
+        ClassForView.id = id;
+    }
 
-	public static String getName() {
+    public static String getName() {
 
-		return name.toString();
-	}
+        return name.toString();
+    }
 
-	public static void setName(StringBuilder name) {
+    public static void setName(StringBuilder name) {
 
-		ClassForView.name = name;
-	}
+        ClassForView.name = name;
+    }
 }

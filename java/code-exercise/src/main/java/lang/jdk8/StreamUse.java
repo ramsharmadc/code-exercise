@@ -21,19 +21,15 @@ public class StreamUse {
         phonNumbrs.put("Sharma", Arrays.asList("0973", "32123", "4334"));
 
         Map<String, List<String>> filteredNumbers =
-                phonNumbrs.
-                        entrySet().
-                        stream().
-                        filter(x -> x.getKey().contains("R")).
-                        collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue()));
+                phonNumbrs.entrySet().stream().filter(x -> x.getKey().contains("R"))
+                        .collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue()));
 
         filteredNumbers.forEach((k, v) -> {
-                    this.method();
-                    System.out.print("Numbers of " + k + " :: {");
-                    v.forEach(v1 -> System.out.print(v1 + " "));
-                    System.out.println("}");
-                }
-        );
+            this.method();
+            System.out.print("Numbers of " + k + " :: {");
+            v.forEach(v1 -> System.out.print(v1 + " "));
+            System.out.println("}");
+        });
 
         System.out.println();
 

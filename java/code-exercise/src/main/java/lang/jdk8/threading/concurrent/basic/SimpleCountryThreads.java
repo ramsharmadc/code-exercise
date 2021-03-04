@@ -7,9 +7,9 @@ public class SimpleCountryThreads {
     public static void main(String[] args) {
         String[] countries = {"France", "Germany", "India", "Britain"};
 
-        /*for (String s : countries) {
-            new Greeter(s).start();
-        }*/
+        /*
+         * for (String s : countries) { new Greeter(s).start(); }
+         */
 
         Arrays.asList(countries).parallelStream().map(s -> {
             new Greeter(s).start();
@@ -17,6 +17,7 @@ public class SimpleCountryThreads {
         }).collect(Collectors.toList());
     }
 }
+
 
 class Greeter extends Thread {
     String name;

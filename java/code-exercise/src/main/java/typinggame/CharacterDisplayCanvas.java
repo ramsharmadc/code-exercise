@@ -25,9 +25,7 @@ public class CharacterDisplayCanvas extends JComponent implements CharacterListe
     }
 
     public Dimension preferredSize() {
-        return new Dimension(
-                fm.getMaxAscent() + 10,
-                fm.getMaxAdvance() + 10);
+        return new Dimension(fm.getMaxAscent() + 10, fm.getMaxAdvance() + 10);
 
     }
 
@@ -40,7 +38,8 @@ public class CharacterDisplayCanvas extends JComponent implements CharacterListe
     protected synchronized void paintedComponent(Graphics gc) {
         Dimension d = getSize();
         gc.clearRect(0, 0, d.width, d.height);
-        if (tempChar[0] == 0) return;
+        if (tempChar[0] == 0)
+            return;
         int charWidth = fm.charWidth((int) tempChar[0]);
         gc.drawChars(tempChar, 0, 1, (d.width - charWidth) / 2, fontHeight);
     }

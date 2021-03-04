@@ -22,7 +22,7 @@ public class RatInMaze {
         m[3][3] = 0;
 
         printSolution(m);
-        System.out.println("");
+        System.out.println();
 
         // starting point m[0][0]
         boolean f = is_there_a_path(m, 0, 0);
@@ -43,17 +43,16 @@ public class RatInMaze {
                 return true;
             if (is_there_a_path(m, i + 1, j))
                 return true;
-            if (is_there_a_path(m, i + 1, j))
-                return true;
+            return is_there_a_path(m, i + 1, j);
         }
         return false;
     }
 
     private static boolean is_safe_cell(int[][] m, int i, int j) {
-        return (i >= 0 && i < m.length && j >= 0 && j < m[0].length && m[i][j] == 0) ? true : false;
+        return i >= 0 && i < m.length && j >= 0 && j < m[0].length && m[i][j] == 0;
     }
 
-    static void printSolution(int sol[][]) {
+    static void printSolution(int[][] sol) {
         for (int i = 0; i < sol.length; i++) {
             for (int j = 0; j < sol[0].length; j++)
                 System.out.print(" " + sol[i][j] + " ");

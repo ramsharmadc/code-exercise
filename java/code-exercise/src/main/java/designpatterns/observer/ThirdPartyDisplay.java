@@ -2,10 +2,10 @@ package designpatterns.observer;
 
 public class ThirdPartyDisplay implements DisplayElement {
 
+    private final Subject weatherData;
     private float temperature;
     private float humidity;
     private float pressure;
-    private Subject weatherData;
 
     public ThirdPartyDisplay(Subject weatherData) {
         this.weatherData = weatherData;
@@ -14,8 +14,8 @@ public class ThirdPartyDisplay implements DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Third Party Display: Temperature " + temperature
-                + " degrees, Humidity " + humidity + ", Pressure " + pressure);
+        System.out.println("Third Party Display: Temperature " + temperature + " degrees, Humidity "
+                + humidity + ", Pressure " + pressure);
     }
 
     @Override

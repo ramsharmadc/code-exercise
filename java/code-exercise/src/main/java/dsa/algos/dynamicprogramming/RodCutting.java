@@ -11,36 +11,36 @@ package dsa.algos.dynamicprogramming;
 
 public class RodCutting implements DynamicProgramming {
 
-	public static int findMaxProd(final int rod_length) {
-		// Base cases
-		if (rod_length < 2) {
-			// System.out.println("Base Case: length=" + rod_length);
-			return 0;
-		}
+    public static int findMaxProd(final int rod_length) {
+        // Base cases
+        if (rod_length < 2) {
+            // System.out.println("Base Case: length=" + rod_length);
+            return 0;
+        }
 
-		// Make a cut at different places and take the maximum of all
-		int max_val = 0;
+        // Make a cut at different places and take the maximum of all
+        int max_val = 0;
 
-		for (int cut = 1; cut < rod_length; cut++) {
-			// System.out.println("Max Val now=" + max_val + " and rod_length=" +
-			// rod_length);
-			max_val = max(max_val, cut * (rod_length - cut), findMaxProd(rod_length - cut) * cut);
-		}
-		// Return the maximum of all values
-		// System.out.println("Max Val Return=" + max_val);
-		return max_val;
-	}
+        for (int cut = 1; cut < rod_length; cut++) {
+            // System.out.println("Max Val now=" + max_val + " and rod_length=" +
+            // rod_length);
+            max_val = max(max_val, cut * (rod_length - cut), findMaxProd(rod_length - cut) * cut);
+        }
+        // Return the maximum of all values
+        // System.out.println("Max Val Return=" + max_val);
+        return max_val;
+    }
 
-	public static void main(final String[] args) {
-		final int rod_length = 5;
-		System.out.println(findMaxProd(rod_length));
-	}
+    public static void main(final String[] args) {
+        final int rod_length = 5;
+        System.out.println(findMaxProd(rod_length));
+    }
 
-	private static int max(final int a, final int b) {
-		return a > b ? a : b;
-	}
+    private static int max(final int a, final int b) {
+        return a > b ? a : b;
+    }
 
-	private static int max(final int a, final int b, final int c) {
-		return max(a, max(b, c));
-	}
+    private static int max(final int a, final int b, final int c) {
+        return max(a, max(b, c));
+    }
 }

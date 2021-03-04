@@ -7,9 +7,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class UnlimitedGarbageCreator {
 
-    private ExecutorService service = Executors.newWorkStealingPool();
+    private final ExecutorService service = Executors.newWorkStealingPool();
 
-    private BlockingQueue blockingQueue = new LinkedBlockingQueue();
+    private final BlockingQueue blockingQueue = new LinkedBlockingQueue();
 
     public static void main(String[] args) {
         UnlimitedGarbageCreator unlimitedGarbageCreator = new UnlimitedGarbageCreator();
@@ -37,9 +37,8 @@ public class UnlimitedGarbageCreator {
 
     public void createGarbage() throws InterruptedException {
         while (true) {
-            System.out.println("Thread-[" +
-                    Thread.currentThread().getName() + "-" +
-                    Thread.currentThread().getId() + "]-> Garbage out");
+            System.out.println("Thread-[" + Thread.currentThread().getName() + "-"
+                    + Thread.currentThread().getId() + "]-> Garbage out");
             blockingQueue.put("garbage");
         }
     }
@@ -47,9 +46,8 @@ public class UnlimitedGarbageCreator {
     public void useGarbage() throws InterruptedException {
         while (true) {
             Object garbage = blockingQueue.take();
-            System.out.println("Thread-[" +
-                    Thread.currentThread().getName() + "-" +
-                    Thread.currentThread().getId() + "]-> Garbage in");
+            System.out.println("Thread-[" + Thread.currentThread().getName() + "-"
+                    + Thread.currentThread().getId() + "]-> Garbage in");
         }
     }
 }

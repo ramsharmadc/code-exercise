@@ -5,17 +5,17 @@ package dsa.hashtable;
  */
 public interface SymbolTable<K, V> {
 
-	void put(K key, V value);
+    void put(K key, V value);
 
-	V get(K key);
+    V get(K key);
 
-	void remove(K key);
+    void remove(K key);
 
-	boolean contains(K key);
+    boolean contains(K key);
 
-	boolean is_empty();
+    boolean is_empty();
 
-	int size();
+    int size();
 
-	Iterable<K> keys();
+    Iterable<K> keys();
 }

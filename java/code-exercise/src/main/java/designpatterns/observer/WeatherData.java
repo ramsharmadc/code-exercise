@@ -3,7 +3,7 @@ package designpatterns.observer;
 /**
  * WeatherData is a Subject Object, which will be subscribed by many Observers
  */
-public interface WeatherData extends Subject{
+public interface WeatherData extends Subject {
 
     long getTemperature();
 

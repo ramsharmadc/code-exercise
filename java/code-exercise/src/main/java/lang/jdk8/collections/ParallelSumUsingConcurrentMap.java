@@ -18,7 +18,8 @@ public class ParallelSumUsingConcurrentMap {
         System.out.println(concurrentMapSum.stream().mapToInt(x -> x).sum());
     }
 
-    static List<Integer> parallelSum(Map<String, Integer> map, int executionTimes) throws InterruptedException {
+    static List<Integer> parallelSum(Map<String, Integer> map, int executionTimes)
+            throws InterruptedException {
         List<Integer> sumList = new ArrayList<>(1000);
         for (int i = 0; i < executionTimes; i++) {
             map.put("test", 0);

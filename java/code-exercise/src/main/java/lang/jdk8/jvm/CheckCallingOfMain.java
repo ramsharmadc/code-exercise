@@ -2,18 +2,18 @@ package lang.jdk8.jvm;
 
 public class CheckCallingOfMain {
 
-	public static void main(final int[] args) {
+    public static void main(final int[] args) {
 
-		System.out.println("Not Happy");
-	}
+        System.out.println("Not Happy");
+    }
 
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
 
-		System.out.println("Happy");
-	}
+        System.out.println("Happy");
+    }
 
-	public static void main(String args) {
+    public static void main(String args) {
 
-		System.out.println("Very Happy");
-	}
+        System.out.println("Very Happy");
+    }
 }

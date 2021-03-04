@@ -2,31 +2,31 @@ package lang.jdk8.basics.polymorphism;
 
 public class AnotherClass extends StaticMethodsChild {
 
-	AnotherClass(int e) {
+    AnotherClass(int e) {
 
-		super(e);
-		// TODO Auto-generated constructor stub
-	}
+        super(e);
+        // TODO Auto-generated constructor stub
+    }
 
-	@Override
-	public String evenThis(StaticMethodsParent obj) {
+    @Override
+    public String evenThis(StaticMethodsParent obj) {
 
-		// TODO Auto-generated method stub
-		return super.evenThis(obj);
-	}
+        // TODO Auto-generated method stub
+        return super.evenThis(obj);
+    }
 
-	@Override
-	public StaticMethodsParent thisAlo() {
+    @Override
+    public StaticMethodsParent thisAlo() {
 
-		// TODO Auto-generated method stub
-		return new StaticMethodsParent();
-	}
+        // TODO Auto-generated method stub
+        return new StaticMethodsParent();
+    }
 
-	@Override
-	public String thisCanbeOverloaded() {
+    @Override
+    public String thisCanbeOverloaded() {
 
-		// TODO Auto-generated method stub
-		return "";
-	}
+        // TODO Auto-generated method stub
+        return "";
+    }
 
 }

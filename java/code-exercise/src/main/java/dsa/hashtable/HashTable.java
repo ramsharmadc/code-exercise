@@ -61,7 +61,8 @@ public class HashTable<K, V> implements SymbolTable<K, V> {
     @Override
     public V get(K key) {
         index = hash_code(key);
-        return backed_array[index] != null ? (backed_array[index].key.equals(key) ? backed_array[index].value : null)
+        return backed_array[index] != null
+                ? (backed_array[index].key.equals(key) ? backed_array[index].value : null)
                 : null;
     }
 

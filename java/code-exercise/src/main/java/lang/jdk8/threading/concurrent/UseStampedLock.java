@@ -15,8 +15,8 @@ public class UseStampedLock {
 
     public static void main(String[] args) {
 
-        IntStream.range(1, 10000).parallel().forEach(x ->
-                executorService.submit(UseStampedLock::getLock));
+        IntStream.range(1, 10000).parallel()
+                .forEach(x -> executorService.submit(UseStampedLock::getLock));
 
         executorService.shutdown();
     }

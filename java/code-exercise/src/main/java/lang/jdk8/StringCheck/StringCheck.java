@@ -17,9 +17,23 @@ public class StringCheck {
         System.out.println(sampleString2.value());
         sampleString2.setCharAt(1, "kishan");
         System.out.println(sampleString2.value());
+
+        // interesting string behaviour
+        String a = "Java is great.";
+        System.out.println(a);
+        String b = a.substring(5); // b is the String "is great."
+        System.out.println(b);
+        String c = a.substring(5, 7);// c is the String "is"
+        System.out.println(c);
+        String d = a.substring(5, a.length());// d is "is great."
+        System.out.println(d);
+
+        StringTokenizer stringTokenizer = new StringTokenizer("Hello|World|Of|Java|Strings","|");
+        while (stringTokenizer.hasMoreTokens())
+            System.out.println(stringTokenizer.nextToken());
     }
 
-    static class SampleString //extends String
+    static class SampleString // extends String
     {
         private String str;
 
@@ -28,7 +42,8 @@ public class StringCheck {
         }
 
         public void setCharAt(int i, String s) {
-            if (i > this.str.length()) return;
+            if (i > this.str.length())
+                return;
             StringBuilder stringBuilder = new StringBuilder(this.str.substring(0, i));
             stringBuilder.append(s);
             stringBuilder.append(this.str.substring(i));

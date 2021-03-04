@@ -4,46 +4,46 @@ import java.util.Iterator;
 
 public class Counter implements Iterable<Integer> {
 
-	private final int limit;
+    private final int limit;
 
-	Counter(final int size) {
+    Counter(final int size) {
 
-		limit = size;
-	}
+        limit = size;
+    }
 
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
 
-		final Counter count = new Counter(20);
+        final Counter count = new Counter(20);
 
-		for (final int i : count) {
-			System.out.print(i + "|");
-		}
-	}
+        for (final int i : count) {
+            System.out.print(i + "|");
+        }
+    }
 
-	@Override
-	public Iterator<Integer> iterator() {
+    @Override
+    public Iterator<Integer> iterator() {
 
-		return new Iterator<Integer>() {
+        return new Iterator<Integer>() {
 
-			private int i = 1;
+            private int i = 1;
 
-			@Override
-			public boolean hasNext() {
+            @Override
+            public boolean hasNext() {
 
-				return i <= limit;
-			}
+                return i <= limit;
+            }
 
-			@Override
-			public Integer next() {
+            @Override
+            public Integer next() {
 
-				return i++;
-			}
+                return i++;
+            }
 
-			@Override
-			public void remove() {
+            @Override
+            public void remove() {
 
-				i--;
-			}
-		};
-	}
+                i--;
+            }
+        };
+    }
 }

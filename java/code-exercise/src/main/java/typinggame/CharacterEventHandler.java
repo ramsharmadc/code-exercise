@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class CharacterEventHandler {
 
-    private Vector<CharacterListener> listeners = new Vector<>();
+    private final Vector<CharacterListener> listeners = new Vector<>();
 
     public void addCharacterListener(CharacterListener cl) {
         listeners.add(cl);
@@ -16,7 +16,7 @@ public class CharacterEventHandler {
 
     public void fireNewCharacter(CharacterSource characterSource, int character) {
         CharacterEvent ce = new CharacterEvent(characterSource, character);
-        CharacterListener[] cl = (CharacterListener[]) listeners.toArray(new CharacterListener[0]);
+        CharacterListener[] cl = listeners.toArray(new CharacterListener[0]);
         for (int i = 0; i < cl.length; i++) {
             cl[i].newCharacter(ce);
         }

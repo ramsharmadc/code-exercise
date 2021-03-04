@@ -11,6 +11,7 @@ class OneMoreStaticClass extends StaticBlocks {
     }
 }
 
+
 public class StaticBlocks {
 
     protected static int i;

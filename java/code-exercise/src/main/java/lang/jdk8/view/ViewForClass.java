@@ -1,64 +1,60 @@
 package lang.jdk8.view;
 
-
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ViewForClass {
 
-	private static Class<?> clazz;
+    private static Class<?> clazz;
+    private final StringBuilder name;
+    private int id;
 
-	private int id;
+    public ViewForClass() {
 
-	private StringBuilder name;
+        // clazz = null;
+        name = new StringBuilder();
+    }
 
-	public ViewForClass() {
+    public ViewForClass(Class<?> clazz) throws IllegalAccessException, IllegalArgumentException,
+            InvocationTargetException, NoSuchMethodException, SecurityException {
 
-		// clazz = null;
-		name = new StringBuilder();
-	}
+        this();
+        ViewForClass.clazz = clazz;
 
-	public ViewForClass(Class<?> clazz) throws IllegalAccessException, IllegalArgumentException,
-			InvocationTargetException, NoSuchMethodException, SecurityException {
+        Field[] allFields = this.collectProperties();
 
-		this();
-		ViewForClass.clazz = clazz;
+        for (Field field : allFields) {
+            System.out.println(field.getName());
 
-		Field[] allFields = this.collectProperties();
+            Method m = ViewForClass.clazz.getClass().getMethod("get" + field.getName());
+            m.invoke(ViewForClass.clazz);
+        }
+    }
 
-		for (Field field : allFields) {
-			System.out.println(field.getName());
+    private Field[] collectProperties() {
 
-			Method m = ViewForClass.clazz.getClass()
-					.getMethod("get" + field.getName());
-			m.invoke(ViewForClass.clazz);
-		}
-	}
+        Field[] allFields = ViewForClass.clazz.getDeclaredFields();
+        return allFields;
+    }
 
-	private Field[] collectProperties() {
+    public int getId() {
 
-		Field[] allFields = ViewForClass.clazz.getDeclaredFields();
-		return allFields;
-	}
+        return id;
+    }
 
-	public int getId() {
+    public void setId(Object object) {
 
-		return id;
-	}
+        this.id = (Integer) object;
+    }
 
-	public void setId(Object object) {
+    public String getName() {
 
-		this.id = (int) object;
-	}
+        return name.toString();
+    }
 
-	public String getName() {
+    public void setName(Object invoke) {
 
-		return name.toString();
-	}
-
-	public void setName(Object invoke) {
-
-		this.name.append((String) invoke);
-	}
+        this.name.append((String) invoke);
+    }
 }

@@ -4,13 +4,14 @@ import java.lang.reflect.InvocationTargetException;
 
 public class TestClass {
 
-	public static void main(final String[] args) throws IllegalAccessException, IllegalArgumentException,
-			InvocationTargetException, NoSuchMethodException, SecurityException {
+    public static void main(final String[] args)
+            throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+            NoSuchMethodException, SecurityException {
 
-		final ClassForView classObj = new ClassForView(12, "Ram Sharma");
-		new ViewForClass(classObj.getClass());
+        final ClassForView classObj = new ClassForView(12, "Ram Sharma");
+        new ViewForClass(classObj.getClass());
 
-		// System.out.println(view.getId());
-		// System.out.println(view.getName());
-	}
+        // System.out.println(view.getId());
+        // System.out.println(view.getName());
+    }
 }

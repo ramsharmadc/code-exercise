@@ -2,7 +2,7 @@ package dsa.algos.dynamicprogramming;
 
 public class Knapsack implements DynamicProgramming {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] v = {60, 100, 120}; // values per weight in same index order
         int[] w = {10, 20, 30}; // weights
         int W = 50; // total capacity in terms weight(w)
@@ -40,7 +40,8 @@ public class Knapsack implements DynamicProgramming {
             return weightByRecusrion(v, w, n - 1, W);
 
         // max of already taken + next , next
-        return max(v[n - 1] + weightByRecusrion(v, w, n - 1, W - w[n - 1]), weightByRecusrion(v, w, n - 1, W));
+        return max(v[n - 1] + weightByRecusrion(v, w, n - 1, W - w[n - 1]),
+                weightByRecusrion(v, w, n - 1, W));
     }
 
     public static int max(final int a, final int b) {

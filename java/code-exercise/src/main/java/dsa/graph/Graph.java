@@ -6,47 +6,48 @@ import java.util.Set;
 import static java.util.Optional.ofNullable;
 
 public class Graph {
-	private final Set<Vertex> vertices = new LinkedHashSet<>();
 
-	private void addVertex(final Vertex node) {
-		vertices.add(node);
-	}
+    private final Set<Vertex> vertices = new LinkedHashSet<>();
 
-	public void addVertexInGraph(final Vertex node) {
-		addVertex(node);
-	}
+    private void addVertex(final Vertex node) {
+        vertices.add(node);
+    }
 
-	private void findShortestPath() {
-	}
+    public void addVertexInGraph(final Vertex node) {
+        addVertex(node);
+    }
 
-	public void findShortestPathInGraph() {
-		findShortestPath();
-	}
+    private void findShortestPath() {
+    }
 
-	private void findVertex() {
-	}
+    public void findShortestPathInGraph() {
+        findShortestPath();
+    }
 
-	public void findVertexInGraph() {
-		findVertex();
-	}
+    private void findVertex() {
+    }
 
-	public void printGraph() {
+    public void findVertexInGraph() {
+        findVertex();
+    }
 
-		for (final Vertex node : vertices) {
-			System.out.print(node.getKey() + " -> [");
+    public void printGraph() {
 
-			ofNullable(node.getAdjVertices()).ifPresent(vl -> {
-				vl.forEach(v -> System.out.print(v.getKey() + " "));
-			});
+        for (final Vertex node : vertices) {
+            System.out.print(node.getKey() + " -> [");
 
-			System.out.println("]");
-		}
-	}
+            ofNullable(node.getAdjVertices()).ifPresent(vl -> {
+                vl.forEach(v -> System.out.print(v.getKey() + " "));
+            });
 
-	private void search() {
-	}
+            System.out.println("]");
+        }
+    }
 
-	public void searchInGraph() {
-		search();
-	}
+    private void search() {
+    }
+
+    public void searchInGraph() {
+        search();
+    }
 }

@@ -7,8 +7,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class ImplementingThreadPool {
 
-    private BlockingQueue<Runnable> bq;
-    private List<SimpleThread> threadPool = new ArrayList<SimpleThread>();
+    private final BlockingQueue<Runnable> bq;
+    private final List<SimpleThread> threadPool = new ArrayList<SimpleThread>();
 
     public ImplementingThreadPool(int _numOfThreads, int _numOfTasks) {
         bq = new LinkedBlockingQueue<>(_numOfTasks);
@@ -18,17 +18,17 @@ public class ImplementingThreadPool {
     }
 
     public static void main(String[] args) {
-        ImplementingThreadPool threadPoolService =
-                new ImplementingThreadPool(10, 10);
+        ImplementingThreadPool threadPoolService = new ImplementingThreadPool(10, 10);
         for (SimpleThread threadFromPool : threadPoolService.threadPool) {
             threadFromPool.start();
         }
     }
 }
 
+
 class SimpleThread extends Thread {
-    private BlockingQueue<Runnable> bq;
-    private boolean isStopped = false;
+    private final BlockingQueue<Runnable> bq;
+    private final boolean isStopped = false;
 
     public SimpleThread(BlockingQueue<Runnable> _bq) {
         bq = _bq;
@@ -37,7 +37,7 @@ class SimpleThread extends Thread {
     @Override
     public void run() {
         while (!(isStopped())) {
-            Runnable task = (Runnable) bq.remove();
+            Runnable task = bq.remove();
             task.run();
         }
     }

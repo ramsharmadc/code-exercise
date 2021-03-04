@@ -2,31 +2,31 @@ package dsa.queue;
 
 public class TestQueue {
 
-	public static void main(final String args[]) {
+    public static void main(final String[] args) {
 
-		new TestQueue().checkQueue();
-	}
+        new TestQueue().checkQueue();
+    }
 
-	public void checkQueue() {
+    public void checkQueue() {
 
-		try {
-			final Queue q = new Queue();
+        try {
+            final Queue q = new Queue();
 
-			for (int i = 0; i < 10; i++) {
-				q.enqueue(i + 1);
-			}
+            for (int i = 0; i < 10; i++) {
+                q.enqueue(i + 1);
+            }
 
-			q.display();
+            q.display();
 
-			for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 2; i++) {
 
-				q.dequeue();
-			}
+                q.dequeue();
+            }
 
-			q.display();
-		} catch (final Exception e) {
-			System.out.println("Error occurred :: " + e.getMessage() + "\n Try Again");
-		}
-	}
+            q.display();
+        } catch (final Exception e) {
+            System.out.println("Error occurred :: " + e.getMessage() + "\n Try Again");
+        }
+    }
 
 }

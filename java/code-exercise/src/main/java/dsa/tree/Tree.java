@@ -2,23 +2,23 @@ package dsa.tree;
 
 public interface Tree<T> extends Cloneable {
 
-	void insert(T val);
+    void insert(T val);
 
-	Node<T> searchNode(T val);
+    Node<T> searchNode(T val);
 
-	void delete(T val);
+    void delete(T val);
 
-	T getMax();
+    T getMax();
 
-	T getMinimun();
+    T getMinimun();
 
-	Node<T> getRoot();
+    Node<T> getRoot();
 
-	void setRoot(Node<T> node);
+    void setRoot(Node<T> node);
 
-	String printStringPreOrder();
+    String printStringPreOrder();
 
-	String printStringInOrder();
+    String printStringInOrder();
 
-	String printStringPostOrder();
+    String printStringPostOrder();
 }

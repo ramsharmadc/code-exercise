@@ -2,33 +2,33 @@ package dsa.tree;
 
 public class SentinalNode {
 
-	private Node next = null;
-	private Node left = null;
-	private Node right = null;
-	private Node parent;
-	private NodeColour color = NodeColour.BLACK;
+    private final Node next = null;
+    private final Node left = null;
+    private final Node right = null;
+    private final NodeColour color = NodeColour.BLACK;
+    private Node parent;
 
-	public void setParent(Node node) {
-		this.parent = node;
-	}
+    public Node getNext() {
+        return next;
+    }
 
-	public Node getNext() {
-		return next;
-	}
+    public Node getLeft() {
+        return left;
+    }
 
-	public Node getLeft() {
-		return left;
-	}
+    public Node getRight() {
+        return right;
+    }
 
-	public Node getRight() {
-		return right;
-	}
+    public Node getParent() {
+        return parent;
+    }
 
-	public Node getParent() {
-		return parent;
-	}
+    public void setParent(Node node) {
+        this.parent = node;
+    }
 
-	public NodeColour getColor() {
-		return color;
-	}
+    public NodeColour getColor() {
+        return color;
+    }
 }

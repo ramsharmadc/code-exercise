@@ -2,10 +2,10 @@ package designpatterns.observer;
 
 public class CurrentConditionsDisplay implements DisplayElement {
 
+    private final Subject weatherData;
     private float temperature;
     private float humidity;
     private float pressure;
-    private Subject weatherData;
 
     public CurrentConditionsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
@@ -14,8 +14,8 @@ public class CurrentConditionsDisplay implements DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Current Conditions: Temperature " + temperature
-                + " degrees, Humidity " + humidity + ", Pressure " + pressure);
+        System.out.println("Current Conditions: Temperature " + temperature + " degrees, Humidity "
+                + humidity + ", Pressure " + pressure);
     }
 
     @Override

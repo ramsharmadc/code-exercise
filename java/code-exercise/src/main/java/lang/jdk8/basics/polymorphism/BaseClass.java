@@ -2,13 +2,13 @@ package lang.jdk8.basics.polymorphism;
 
 public class BaseClass {
 
-	protected Object getObject() {
+    protected Object getObject() {
 
-		return null;
-	}
+        return null;
+    }
 
-	public StaticMethodsParent getStaticMethod() {
+    public StaticMethodsParent getStaticMethod() {
 
-		return null;
-	}
+        return null;
+    }
 }

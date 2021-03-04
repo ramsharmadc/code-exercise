@@ -5,97 +5,98 @@ import java.util.Set;
 
 public class UndirectedGraph {
 
-	public static void main(String[] args) {
-		Graph g = new UndirectedGraph().new Graph();
-		g.addEdge(1, 2);
-		g.addEdge(2, 3);
-		g.addEdge(3, 4);
-		g.addEdge(3, 1);
-		g.addEdge(5, 6);
-		g.addEdge(5, 7);
+    public static void main(String[] args) {
 
-		int arr[] = { 2, 4, 5 };
+        Graph g = new UndirectedGraph().new Graph();
+        g.addEdge(1, 2);
+        g.addEdge(2, 3);
+        g.addEdge(3, 4);
+        g.addEdge(3, 1);
+        g.addEdge(5, 6);
+        g.addEdge(5, 7);
 
-		for (int a : arr) {
-			g.findAllReachableNodesFrom(new UndirectedGraph().new Vertex(a));
-		}
-	}
+        int[] arr = {2, 4, 5};
 
-	class Graph {
-		Set<Vertex> vertices = new HashSet<>();
+        for (int a : arr) {
+            g.findAllReachableNodesFrom(new UndirectedGraph().new Vertex(a));
+        }
+    }
 
-		void addEdge(int a, int b) {
+    class Graph {
+        Set<Vertex> vertices = new HashSet<>();
 
-			Vertex aV = new Vertex(a);
-			Vertex bV = new Vertex(b);
+        void addEdge(int a, int b) {
 
-			if (vertices.contains(aV)) {
-				Vertex node = findVertexFromGraph(aV);
-				Set<Vertex> adjVs = node.adjacentVertices;
-				if (adjVs != null)
-					for (Vertex v : node.adjacentVertices) {
-						aV.addToAdjacentSet(v);
-					}
-				aV.addToAdjacentSet(bV);
+            Vertex aV = new Vertex(a);
+            Vertex bV = new Vertex(b);
 
-				vertices.remove(node);
-				vertices.add(aV);
+            if (vertices.contains(aV)) {
+                Vertex node = findVertexFromGraph(aV);
+                Set<Vertex> adjVs = node.adjacentVertices;
+                if (adjVs != null)
+                    for (Vertex v : node.adjacentVertices) {
+                        aV.addToAdjacentSet(v);
+                    }
+                aV.addToAdjacentSet(bV);
 
-				// aV.addToAdjacentSet(bV);
-			} else {
-				aV.addToAdjacentSet(bV);
-				vertices.add(aV);
-			}
-		}
+                vertices.remove(node);
+                vertices.add(aV);
 
-		void findAllReachableNodesFrom(Vertex v) {
-			System.out.format("\nNodes reachable from %d are :", v.key);
-			if (vertices.contains(v)) {
+                // aV.addToAdjacentSet(bV);
+            } else {
+                aV.addToAdjacentSet(bV);
+                vertices.add(aV);
+            }
+        }
 
-				Vertex node = findVertexFromGraph(v);
-				if (node != null) {
-					Set<Vertex> adjVs = node.adjacentVertices;
-					if (adjVs != null)
-						for (Vertex v1 : adjVs) {
-							System.out.print(" " + v1.key + ", ");
-						}
-				}
-			}
-		}
+        void findAllReachableNodesFrom(Vertex v) {
+            System.out.format("\nNodes reachable from %d are :", v.key);
+            if (vertices.contains(v)) {
 
-		private Vertex findVertexFromGraph(Vertex v) {
-			// TODO Auto-generated method stub
-			for (Vertex node : vertices) {
-				if (node.equals(v))
-					return node;
-			}
-			return null;
-		}
-	}
+                Vertex node = findVertexFromGraph(v);
+                if (node != null) {
+                    Set<Vertex> adjVs = node.adjacentVertices;
+                    if (adjVs != null)
+                        for (Vertex v1 : adjVs) {
+                            System.out.print(" " + v1.key + ", ");
+                        }
+                }
+            }
+        }
 
-	class Vertex {
-		int key;
-		Set<Vertex> adjacentVertices;
+        private Vertex findVertexFromGraph(Vertex v) {
+            // TODO Auto-generated method stub
+            for (Vertex node : vertices) {
+                if (node.equals(v))
+                    return node;
+            }
+            return null;
+        }
+    }
 
-		public Vertex(int val) {
-			this.key = val;
-		}
+    class Vertex {
+        int key;
+        Set<Vertex> adjacentVertices;
 
-		public void addToAdjacentSet(Vertex a) {
-			if (adjacentVertices == null) {
-				adjacentVertices = new HashSet<>();
-			}
-			adjacentVertices.add(a);
-		}
+        public Vertex(int val) {
+            this.key = val;
+        }
 
-		@Override
-		public boolean equals(Object obj) {
-			return this.key == ((Vertex) obj).key;
-		}
+        public void addToAdjacentSet(Vertex a) {
+            if (adjacentVertices == null) {
+                adjacentVertices = new HashSet<>();
+            }
+            adjacentVertices.add(a);
+        }
 
-		@Override
-		public int hashCode() {
-			return key;
-		}
-	}
+        @Override
+        public boolean equals(Object obj) {
+            return this.key == ((Vertex) obj).key;
+        }
+
+        @Override
+        public int hashCode() {
+            return key;
+        }
+    }
 }

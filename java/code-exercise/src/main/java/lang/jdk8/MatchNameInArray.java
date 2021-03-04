@@ -7,8 +7,8 @@ public class MatchNameInArray {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
-//        String name = s.nextLine();                 // Reading input from STDIN
-//        System.out.println("Hi, " + name + ".");
+        // String name = s.nextLine(); // Reading input from STDIN
+        // System.out.println("Hi, " + name + ".");
 
         int c = -1, m = 0, n = 0;
         int[][] arr = new int[0][];
@@ -28,7 +28,8 @@ public class MatchNameInArray {
                 }
                 c += 1;
             }
-            if (c == m) break;
+            if (c == m)
+                break;
         }
 
         System.out.println(arr);

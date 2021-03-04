@@ -2,37 +2,37 @@ package lang.jdk8.basics.clasz;
 
 public class InnerClass {
 
-	private static String s = "Hello";
-	private InnerClass.ThisIsInnerClass o = new ThisIsInnerClass();
+    private static final String s = "Hello";
+    private InnerClass.ThisIsInnerClass o = new ThisIsInnerClass();
 
-	public InnerClass.ThisIsInnerClass getO() {
+    public InnerClass.ThisIsInnerClass getO() {
 
-		return o;
-	}
+        return o;
+    }
 
-	public void setO(InnerClass.ThisIsInnerClass o) {
+    public void setO(InnerClass.ThisIsInnerClass o) {
 
-		this.o = o;
-	}
+        this.o = o;
+    }
 
-	static class Entry {
-		// for static nested class, static variable is fine
-		static int i = 0;
+    static class Entry {
+        // for static nested class, static variable is fine
+        static int i = 0;
 
-	}
+    }
 
-	class ThisIsInnerClass {
+    class ThisIsInnerClass {
 
-		// static blocks not allowed
-		// static {
-		// }
+        // static blocks not allowed
+        // static {
+        // }
 
-		// static members not allowed, only FINAL static
-		static final int n = 0;
+        // static members not allowed, only FINAL static
+        static final int n = 0;
 
-		public void callingInner() {
-			System.out.println(n);
-			System.out.println(s);
-		}
-	}
+        public void callingInner() {
+            System.out.println(n);
+            System.out.println(s);
+        }
+    }
 }

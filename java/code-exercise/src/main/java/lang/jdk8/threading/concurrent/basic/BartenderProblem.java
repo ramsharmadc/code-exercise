@@ -22,14 +22,15 @@ public class BartenderProblem {
     }
 }
 
+
 class Bartender implements Runnable {
 
     @Override
     public void run() {
         while (true) {
             if (Thread.interrupted()) {
-                System.out.println("Thread:" + Thread.currentThread().getName() + " " +
-                        "Bartender: zzz... errrr.. is something waiting?");
+                System.out.println("Thread:" + Thread.currentThread().getName() + " "
+                        + "Bartender: zzz... errrr.. is something waiting?");
             }
             try {
                 TimeUnit.SECONDS.sleep(1);
@@ -39,6 +40,7 @@ class Bartender implements Runnable {
         }
     }
 }
+
 
 class Customer implements Runnable {
 
@@ -54,15 +56,14 @@ class Customer implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Thread:" + Thread.currentThread().getName() + " " +
-                "Is anyone here. Waiting for " + wait_time + " second");
+        System.out.println("Thread:" + Thread.currentThread().getName() + " "
+                + "Is anyone here. Waiting for " + wait_time + " second");
         try {
             TimeUnit.SECONDS.sleep(wait_time);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Thread:" + Thread.currentThread().getName() + " " +
-                "Pressing bell..");
+        System.out.println("Thread:" + Thread.currentThread().getName() + " " + "Pressing bell..");
         bartender.interrupt();
     }
 }
