@@ -2,8 +2,8 @@ package designpatterns.builder;
 
 public class UseBuilderPattern {
 
-    private int id;
-    private int age;
+    private final int id;
+    private final int age;
     private String fistame;
 
     public UseBuilderPattern(int id, int age) {

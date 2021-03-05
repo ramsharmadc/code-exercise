@@ -1,6 +1,6 @@
 package techprep;
 
-import dsa.tree.Node;
+import dsalgo.tree.Node;
 
 public class CheckIfBST {
 

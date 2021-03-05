@@ -55,6 +55,6 @@ public class FindLargestNumberOfOne {
     }
 
     static int findFirstPositionOf1UsingBinarySearch(int[] a) {
-        return BinarySearch.search(a, 1, 0, a.length-1);
+        return BinarySearch.search(a, 1, 0, a.length - 1);
     }
 }

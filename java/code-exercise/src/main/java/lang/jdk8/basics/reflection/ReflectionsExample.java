@@ -2,7 +2,7 @@ package lang.jdk8.basics.reflection;
 
 // import problem.misc.ReverseNumber;
 
-import casestudy.misc.ReverseNumber;
+import problemsolving.misc.ReverseNumber;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

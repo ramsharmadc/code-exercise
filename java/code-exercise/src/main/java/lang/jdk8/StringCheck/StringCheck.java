@@ -25,10 +25,10 @@ public class StringCheck {
         System.out.println(b);
         String c = a.substring(5, 7);// c is the String "is"
         System.out.println(c);
-        String d = a.substring(5, a.length());// d is "is great."
+        String d = a.substring(5);// d is "is great."
         System.out.println(d);
 
-        StringTokenizer stringTokenizer = new StringTokenizer("Hello|World|Of|Java|Strings","|");
+        StringTokenizer stringTokenizer = new StringTokenizer("Hello|World|Of|Java|Strings", "|");
         while (stringTokenizer.hasMoreTokens())
             System.out.println(stringTokenizer.nextToken());
     }

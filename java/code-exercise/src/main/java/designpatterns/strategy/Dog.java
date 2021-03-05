@@ -5,17 +5,17 @@ public abstract class Dog {
     EatBehaviour eatBehaviour;
     BarkBehaviour barkBehaviour;
 
-    public Dog(){
+    public Dog() {
 
     }
 
     abstract void display();
 
-    public void doBark(){
+    public void doBark() {
         barkBehaviour.bark();
     }
 
-    public void doEat(){
+    public void doEat() {
         eatBehaviour.eat();
     }
 
