@@ -1,0 +1,15 @@
+bootstrapServers: localhost:9092
+clientId: TestProducer
+
+server:
+  applicationConnectors:
+  - type: http
+    port: 9093
+  adminConnectors:
+  - type: http
+    port: 9096
+
+logging:
+  level: INFO
+  loggers:
+    simpleapps.kafkapoc: DEBUG
