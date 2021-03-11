@@ -1,7 +1,7 @@
 def total(nums):
-    local_sum = 0;
+    local_sum = 0
     for i in nums:
-        local_sum += i;
+        local_sum += i
 
     print(local_sum)
 
