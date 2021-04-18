@@ -3,6 +3,7 @@ package dsa.datastructures.list;
 public class ReverseLinkedList {
 
     public static void main(String[] args) {
+
         LinkedList<Integer> list = new LinkedList<Integer>();
         list.insert(1);
         list.insert(2);
@@ -48,6 +49,7 @@ public class ReverseLinkedList {
     }
 
     private static void reverseLinkList(LinkedList<Integer> list) {
+
         Node<Integer> head = list.getHead();
         Node<Integer> next = head.getNext();
         Node<Integer> previous = null;

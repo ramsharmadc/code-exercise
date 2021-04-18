@@ -10,9 +10,12 @@ public class ReverseWords {
         // String str = "Sunday means Holiday";
         // String str = "This is a test";
         // String str = "all your base";
-        final String str = "foobar";
+        final String str = "foo bar";
+
         final String reversedStr = reverseWordsInString(str);
+
         final String reversedStrAgain = reverseOrderString(str);
+
         System.out.println(str);
         System.out.println(reversedStr);
         System.out.println(reversedStrAgain);

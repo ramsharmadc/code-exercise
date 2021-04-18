@@ -25,7 +25,8 @@ public class CatalogueUtils {
      * @param bookQueryResponseEntity
      * @return
      */
-    public static List<Catalogue> getBookCatalogues(ResponseEntity<BookQueryResponseEntity> bookQueryResponseEntity) {
+    public static List<Catalogue> getBookCatalogues(
+            ResponseEntity<BookQueryResponseEntity> bookQueryResponseEntity) {
         if (bookQueryResponseEntity == null ||
                 bookQueryResponseEntity.getBody() == null ||
                 bookQueryResponseEntity.getBody().getItems() == null ||
@@ -38,7 +39,8 @@ public class CatalogueUtils {
             if (o instanceof Map) {
                 Map<String, Object> volumeInfo = (Map<String, Object>) ((Map) o).get("volumeInfo");
                 String title = (String) volumeInfo.get(BookResponseEntityField.Title.getJsonField());
-                List<String> authors = (List<String>) volumeInfo.get(BookResponseEntityField.Authors.getJsonField());
+                List<String> authors = (List<String>) volumeInfo.
+                        get(BookResponseEntityField.Authors.getJsonField());
                 Catalogue c = new Catalogue(title, authors, CatalogueType.Book);
                 catalogues.add(c);
             }

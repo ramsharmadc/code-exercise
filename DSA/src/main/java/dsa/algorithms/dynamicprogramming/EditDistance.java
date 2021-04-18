@@ -5,8 +5,10 @@ public class EditDistance implements DynamicProgramming {
     public static void main(String[] args) {
         String s1 = "mother";
         String s2 = "father";
+
         int d = new EditDistance().editDistance(s1, s2, s1.length(), s2.length());
         System.out.println("REC:: Edit distance b/w " + s1 + " and " + s2 + " is: " + d);
+
         d = new EditDistance().editDistanceByDP(s1, s2, s1.length(), s2.length());
         System.out.println("DP:: Edit distance b/w " + s1 + " and " + s2 + " is: " + d);
     }

@@ -7,7 +7,8 @@ public class DiameterOfTree {
         // tree is empty
         if (node == null)
             return 0;
-        if (node.getLeftNode() == null && node.getRightNode() == null)
+        if (node.getLeftNode() == null &&
+                node.getRightNode() == null)
             return 0;
 
         // add 1 at current level, and
@@ -35,7 +36,7 @@ public class DiameterOfTree {
 
         DiameterOfTree obj = new DiameterOfTree();
         int diameter = obj.diameter(tree.getRoot());
-        System.out.println("Diameter of tree: " + diameter);
+        System.out.println("Diameter of tree => " + diameter);
     }
 
     int diameter(Node root) {

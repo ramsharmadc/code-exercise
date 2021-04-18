@@ -1,3 +1,4 @@
+
 package dsa.problemsolving.misc;
 
 import dsa.datastructures.tree.BinarySearchTree;
@@ -32,11 +33,14 @@ public class PrintCommonNodesInTree {
         tree2.insert(10);
         tree2.insert(54);
         System.out.println(tree2.printStringInOrder());
+
         findCommonNodes(tree, tree2);
     }
 
     private static void findCommonNodes(BinaryTree<Integer> t1, BinaryTree<Integer> t2) {
+
         inorderTraversalTree1(t1.getRoot());
+
         inorderTraversalTree2(t2.getRoot());
 
         while (!stk_2.isEmpty() && !stk_1.isEmpty()) {

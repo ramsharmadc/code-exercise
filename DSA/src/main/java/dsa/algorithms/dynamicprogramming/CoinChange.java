@@ -2,16 +2,16 @@ package dsa.algorithms.dynamicprogramming;
 
 public class CoinChange implements DynamicProgramming {
 
-    int sum = 250; // total change(sum)required
-    int[] avialableCoins = {1, 5, 10, 25, 100}; // coins denomination available
+    final static int sum = 250; // total change(sum)required
+    final static int[] availableCoins = {1, 5, 10, 25, 100}; // coins denomination available
 
     public static void main(String[] args) {
         CoinChange c = new CoinChange();
         try {
-            int cr = c.coinChangeRecursion(c.avialableCoins, c.sum, c.avialableCoins.length - 1);
+            int cr = c.coinChangeWithRecursion(availableCoins, sum, availableCoins.length - 1);
             System.out.println("By Recursion :: " + cr);
 
-            int cdp = c.coinChangeDP(c.avialableCoins, c.sum);
+            int cdp = c.coinChangeWithDP(availableCoins, sum);
             System.out.println("By DP :: " + cdp);
 
         } catch (Exception e) {
@@ -36,7 +36,7 @@ public class CoinChange implements DynamicProgramming {
     }
 
     // BankAccountTransaction by recursion
-    int coinChangeRecursion(int[] coins, int sum, int len) {
+    int coinChangeWithRecursion(int[] coins, int sum, int len) {
         if (len < 0)
             return 0;
         else if (sum < 0)
@@ -46,12 +46,12 @@ public class CoinChange implements DynamicProgramming {
         else if (coins[len] == sum)
             return 1;
         else if (coins[len] < sum)
-            return 1 + coinChangeRecursion(coins, sum - coins[len], len);
+            return 1 + coinChangeWithRecursion(coins, sum - coins[len], len);
         else
-            return coinChangeRecursion(coins, sum, len - 1);
+            return coinChangeWithRecursion(coins, sum, len - 1);
     }
 
-    int coinChangeDP(int[] coins, int sum) {
+    int coinChangeWithDP(int[] coins, int sum) {
         int[][] dp = new int[coins[coins.length - 1] + 1][sum + 1];
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {

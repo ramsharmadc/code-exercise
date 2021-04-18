@@ -21,6 +21,7 @@ public class FlattenBinaryTreeInLinkedList {
     }
 
     public void flattenTree(Node<Integer> root) {
+
         if (root == null ||
                 (root.getLeftNode() == null && root.getRightNode() == null)) return;
 

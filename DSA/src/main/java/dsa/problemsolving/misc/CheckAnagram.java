@@ -32,13 +32,29 @@ public class CheckAnagram {
         return true;
     }
 
+    public boolean isAnagaramOptimized(String strActual, String strGiven) {
+
+        for (char c : strActual.toCharArray()) {
+            int pivot = strGiven.indexOf(c);
+            if (pivot != -1) {
+                String tmpLeft = strGiven.substring(0, strGiven.indexOf(c));
+                String tmpRight = strGiven.substring(strGiven.indexOf(c) + 1);
+                strGiven = tmpLeft + tmpRight;
+            }
+        }
+
+        return strGiven.trim().equals("");
+    }
+
     /**
      * @param args
      */
     public static void main(final String[] args) {
         final String one = "COT";
         final String two = "OTC";
-        final boolean b = checkAnagram(one, two);
+        final boolean b = new CheckAnagram().isAnagaramOptimized(one, two);
         System.out.println(b);
+
+
     }
 }

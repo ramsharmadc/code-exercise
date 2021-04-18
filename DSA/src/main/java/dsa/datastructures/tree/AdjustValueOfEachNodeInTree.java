@@ -8,7 +8,9 @@ public class AdjustValueOfEachNodeInTree {
         tr.insert(9);
         tr.insert(12);
         System.out.println(tr.printStringInOrder());
+
         updateWeight(tr.getRoot());
+
         System.out.println(tr.printStringInOrder());
     }
 

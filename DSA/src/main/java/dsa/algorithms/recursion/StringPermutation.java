@@ -11,10 +11,11 @@ public class StringPermutation {
     public static void main(final String[] args) {
         final StringPermutation oj = new StringPermutation();
         try {
-            final String str = "ABCDEFGH";
+            final String str = "123";
             List<String> permutations = new ArrayList<>();
             oj.permute(str.toCharArray(), permutations, 0, (str.length() - 1));
-            System.out.print(permutations);
+//            System.out.print(permutations);
+            System.out.println("\nTotal permutations = " + permutations.size());
         } catch (final Exception e) {
             System.out.println("ERROR:: " + e.getMessage());
         }
@@ -23,7 +24,7 @@ public class StringPermutation {
     private void permute(char[] s, List<String> p, int start, int end) throws Exception {
         if (start == end) {
             System.out.println(CommonUtils.arrayAsString(s, ""));
-            // p.add(CommonUtils.arrayAsString(s, ""));
+             p.add(CommonUtils.arrayAsString(s, ""));
         } else {
             for (int j = start; j <= end; j++) {
                 swap(s, start, j);

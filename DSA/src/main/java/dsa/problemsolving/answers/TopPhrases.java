@@ -42,7 +42,8 @@ public class TopPhrases {
 
         // Max heap to store phrases in their order of occurrence
         Queue<Phrase<String>> phrasesMaxHeap = new PriorityQueue<>(
-                (o1, o2) -> (o1.text.equals(o2.text) || o1.countOfOccurence == o2.countOfOccurence)
+                (o1, o2) -> (o1.text.equals(o2.text) ||
+                        o1.countOfOccurence == o2.countOfOccurence)
                         ? 0
                         : (o1.countOfOccurence < o2.countOfOccurence ? 1 : -1));
 

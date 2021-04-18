@@ -19,8 +19,12 @@ public class InfixToPostfix {
 
         for (Character ch : postfixExpression.toString().toCharArray()) {
 
-            if (!ch.equals('+') && !ch.equals('/') && !ch.equals('*') && !ch.equals('-')
-                    && !ch.equals('(') && !ch.equals(')')) {
+            if (!ch.equals('+') &&
+                            !ch.equals('/') &&
+                            !ch.equals('*') &&
+                            !ch.equals('-') &&
+                            !ch.equals('(') &&
+                            !ch.equals(')')) {
 
                 stkVal.push(Double.valueOf(ch));
             } else {
