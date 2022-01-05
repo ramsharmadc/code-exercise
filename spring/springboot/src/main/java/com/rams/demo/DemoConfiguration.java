@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Configuration;
 public class DemoConfiguration {
 
     @Bean
-    private InventoryService getInventoryService() {
+    public InventoryService getInventoryService() {
         return new InventoryService();
     }
 
     @Bean
-    private ProductService getProductService() {
+    public ProductService getProductService() {
         return new ProductService();
     }
 }
