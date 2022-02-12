@@ -24,8 +24,8 @@ public class EditDistance implements DynamicProgramming {
             return editDistance(s1, s2, (m - 1), (n - 1));
         else
             return 1 + min(editDistance(s1, s2, m, (n - 1)), // delete
-                    editDistance(s1, s2, (m - 1), n), // inserts
-                    editDistance(s1, s2, (m - 1), (n - 1))); // change
+                           editDistance(s1, s2, (m - 1), n), // inserts
+                           editDistance(s1, s2, (m - 1), (n - 1))); // change
     }
 
     // dynamic programming ( !!--clever minds--!! )

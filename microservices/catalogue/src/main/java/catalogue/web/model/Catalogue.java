@@ -3,7 +3,6 @@ package catalogue.web.model;
 import java.util.List;
 
 public class Catalogue {
-
     private String title;
     private List<String> authors;
     private List<String> artists;

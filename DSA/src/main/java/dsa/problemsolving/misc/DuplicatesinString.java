@@ -5,7 +5,7 @@ public class DuplicatesinString {
     public static void main(final String[] args) {
 
         String str = removeDups("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ");
-        str = removeDups("Today is the day");
+//        str = removeDups("Today is the day");
         System.out.println(str);
     }
 
@@ -19,7 +19,7 @@ public class DuplicatesinString {
         final boolean[] charSet = new boolean[128];
         for (int i = 0; i < str.length(); i++) {
             final char c = str.charAt(i);
-            if (!charSet[c]) {
+            if (c!=' ' && !charSet[c]) {
                 strB.append(c);
                 charSet[c] = true;
             }

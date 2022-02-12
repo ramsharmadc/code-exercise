@@ -27,6 +27,7 @@ public class RotateArrayByN {
             rotateArray(arr, n);
 
             TimeUnit.SECONDS.sleep(5);
+//            "".toCharArray()
 
             System.out.println("Rotation finished...");
 

@@ -2,11 +2,10 @@ package designpatterns.strategy;
 
 public abstract class Dog {
 
-    EatBehaviour eatBehaviour;
-    BarkBehaviour barkBehaviour;
+    protected EatBehaviour eatBehaviour;
+    protected BarkBehaviour barkBehaviour;
 
     public Dog() {
-
     }
 
     abstract void display();

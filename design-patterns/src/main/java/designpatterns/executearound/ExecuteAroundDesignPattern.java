@@ -24,9 +24,7 @@ public class ExecuteAroundDesignPattern {
 
     public interface UsefulResource {
         void open();
-
         void close();
-
         void use();
     }
 

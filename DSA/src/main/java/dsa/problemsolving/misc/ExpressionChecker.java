@@ -6,11 +6,15 @@ public class ExpressionChecker {
 
     public static boolean checkExpression(String exp) throws NullPointerException {
 
-        if (exp == null)
+        if (exp == null) {
             throw new NullPointerException("Expression is null");
-        if (exp.equals(""))
+        }
+        if (exp.equals("")) {
             return true;
+        }
+
         Stack<Character> stk = new Stack<>();
+
         for (char c : exp.toCharArray()) {
             if (c == '(') {
                 stk.push(c);
