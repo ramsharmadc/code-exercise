@@ -15,12 +15,12 @@ import java.util.Set;
 @EnableSwagger2
 public class SwaggerConfig {
 
+    public static final Set<String> DEFAULT_PRODUCES_AND_CONSUME =
+            new HashSet<>(Arrays.asList("appliction/json"));
     private static final ApiInfo DEFAULT_API_INFO =
             new ApiInfo("EmployeePortalService",
                     "EmployeePortalService Swagger UI",
                     "0.01", "", "", "", "");
-    public static final Set<String> DEFAULT_PRODUCES_AND_CONSUME =
-            new HashSet<>(Arrays.asList("appliction/json"));
 
     @Bean
     public Docket api() {

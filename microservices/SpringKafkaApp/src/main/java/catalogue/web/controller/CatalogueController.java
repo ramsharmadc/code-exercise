@@ -44,12 +44,12 @@ public class CatalogueController {
      * Search for Albums and Books. New Search modules can be added as required.
      * Expects a token as the parameter, if the token is not provided it will not do the search.
      * Search result are the aggregation of all the modules that are sorted on Title
-     *
+     * <p>
      * Examples -
      * 1. To search for a single word token like Jimmy,
-     *          use url - http://localhost:8080/catalogue/search/Jimmy
+     * use url - http://localhost:8080/catalogue/search/Jimmy
      * 2. To search for multiple token like Jimmy Hendrix,
-     *          use url - http://localhost:8080/catalogue/search/Jimmy+Hendrix
+     * use url - http://localhost:8080/catalogue/search/Jimmy+Hendrix
      * <p>
      */
     @RequestMapping(method = RequestMethod.GET, value = "/search/{token}")
