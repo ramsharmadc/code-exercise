@@ -52,16 +52,57 @@ public class KafkaMessageProducer {
 
     // sending message to a specific partition of a topic 'partitioned'
     public void sendMessageToPartition(String message, int partition) {
-        kafkaTemplate.send(partitionedTopicName, partition, null, message);
+
+        ListenableFuture<SendResult<String, String>> future =
+                kafkaTemplate.send(partitionedTopicName, partition, null, message);
+
+        future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
+            @Override
+            public void onSuccess(SendResult<String, String> result) {
+                log.log(KafkaMessageProducer.class,
+                        "Sent message [" + message + "] on partition [" + partition + "] with offset=[" + result.getRecordMetadata().offset() + "]");
+            }
+
+            @Override
+            public void onFailure(Throwable ex) {
+                log.log(KafkaMessageProducer.class, "Unable to send message [" + message + "] due to : " + ex.getMessage());
+            }
+        });
     }
 
     // sending message to topic 'filtered'
     public void sendMessageToFiltered(String message) {
-        kafkaTemplate.send(filteredTopicName, message);
+        ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(filteredTopicName, message);
+
+        future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
+            @Override
+            public void onSuccess(SendResult<String, String> result) {
+                log.log(KafkaMessageProducer.class, "Sent message [" + message + "] with offset=[" + result.getRecordMetadata()
+                        .offset() + "]");
+            }
+
+            @Override
+            public void onFailure(Throwable ex) {
+                log.log(KafkaMessageProducer.class, "Unable to send message [" + message + "] due to : " + ex.getMessage());
+            }
+        });
     }
 
     // sending message to topic 'greeting'
     public void sendGreetingMessage(Greeting greeting) {
-        greetingKafkaTemplate.send(greetingTopicName, greeting);
+        ListenableFuture<SendResult<String, Greeting>> future = greetingKafkaTemplate.send(greetingTopicName, greeting);
+
+        future.addCallback(new ListenableFutureCallback<SendResult<String, Greeting>>() {
+            @Override
+            public void onSuccess(SendResult<String, Greeting> result) {
+                log.log(KafkaMessageProducer.class, "Sent message [" + greeting.toString() + "] with offset=[" + result.getRecordMetadata()
+                        .offset() + "]");
+            }
+
+            @Override
+            public void onFailure(Throwable ex) {
+                log.log(KafkaMessageProducer.class, "Unable to send message [" + greeting.toString() + "] due to : " + ex.getMessage());
+            }
+        });
     }
 }
