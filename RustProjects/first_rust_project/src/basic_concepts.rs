@@ -94,4 +94,9 @@ pub mod basic_concepts {
         let d = Arc::new(Mutex::new(40));
         println!("a={:?},b={:?},c={:?},d={:?}", a, b, c, d)
     }
+
+    pub fn rounding_off_floats() {
+        let a: f32 = 34.56;
+        println!("rounding off a float {} looks like this, {}", a, a.round());
+    }
 }
