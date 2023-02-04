@@ -71,7 +71,7 @@ public class KafkaMessageProducer {
     }
 
     // sending message to topic 'filtered'
-    public void sendMessageToFiltered(String message) {
+    public void  sendMessageToFiltered(String message) {
         ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(filteredTopicName, message);
 
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {

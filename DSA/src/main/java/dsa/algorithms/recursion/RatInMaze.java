@@ -53,6 +53,8 @@ public class RatInMaze {
     }
 
     static void printSolution(int[][] sol) {
+        System.out.println("Printing solution for the matrix");
+        System.out.println("Starting from the first cell of the matrix to the last cell of the matrix");
         for (int i = 0; i < sol.length; i++) {
             for (int j = 0; j < sol[0].length; j++)
                 System.out.print(" " + sol[i][j] + " ");

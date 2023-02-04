@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SimpleExample {
 
@@ -36,6 +37,8 @@ public class SimpleExample {
 
         upperCaseNamedArtists.stream().map(x->x.concat("-Delta")).limit(2).forEach(c-> System.out.println(c));
 
+        Stream.of(1,2,3,4,5).mapToDouble(x->x).forEach(x->
+                System.out.print(x+","));
 
     }
 

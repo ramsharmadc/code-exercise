@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 public class CatalogueUtils {
-
     /**
      * Sorts the Catalogue by Title
      */

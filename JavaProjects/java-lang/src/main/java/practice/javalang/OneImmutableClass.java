@@ -1,4 +1,4 @@
-package javalang;
+package practice.javalang;
 
 import java.util.Date;
 import java.util.Objects;

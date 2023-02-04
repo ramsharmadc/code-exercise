@@ -5,7 +5,6 @@ public class StaticMethodsChild extends StaticMethodsParent {
     int r = 1;
 
     StaticMethodsChild(int e) {
-
         r = e;
         System.out.println("child class :: " + r);
     }

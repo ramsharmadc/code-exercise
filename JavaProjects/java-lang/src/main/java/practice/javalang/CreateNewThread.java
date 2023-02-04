@@ -1,4 +1,4 @@
-package javalang;
+package practice.javalang;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;

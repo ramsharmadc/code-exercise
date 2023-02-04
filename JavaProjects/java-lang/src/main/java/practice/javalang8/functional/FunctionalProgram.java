@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 public class FunctionalProgram {
 
-    public static Predicate<Integer> IsPrimePredicate =
+    static Predicate<Integer> IsPrimePredicate =
             x -> x > 1 && IntStream.range(2, x).noneMatch(y -> x % y == 0);
     static Function<Integer, Integer> addOne = n -> n + 1;
     static Function<Integer, Integer> multiplyTen = n -> n * 10;
@@ -27,6 +27,12 @@ public class FunctionalProgram {
         Consumer<String> aConsumer = s -> System.out.println(s);
         // prints a different class for lambda as compared to anonymous class
         System.out.println(aConsumer);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Finalized is called now...");
+        super.finalize();
     }
 
     public static boolean isPrime(int x) {

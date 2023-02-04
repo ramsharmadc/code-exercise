@@ -18,6 +18,7 @@ pub mod basic_concepts {
     pub fn check_enum() {
         let mut grains: Vec<Cereal> = vec![];
         grains.push(Cereal::Rice);
+        grains.push(Cereal::Rice);
         grains.push(Cereal::Barley);
         grains.push(Cereal::Millet);
         grains.push(Cereal::Rye);

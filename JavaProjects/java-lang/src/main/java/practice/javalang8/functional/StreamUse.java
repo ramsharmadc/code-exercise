@@ -30,10 +30,16 @@ public class StreamUse {
 
         streamBldr.build().forEach(x -> l.add(x));
 
+
+
+
+
+
         Stream.of(4, 3, 5, 8, 6, 1).sorted(Integer::compare).forEach(StreamUse::accept);
         List<Integer> l1 = Stream.of(4, 3, 5, 8, 6, 1).parallel().
                 sorted(Integer::compare).
                 collect(Collectors.toList());
+
 
     }
 

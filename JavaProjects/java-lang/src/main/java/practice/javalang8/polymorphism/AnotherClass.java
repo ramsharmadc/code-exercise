@@ -3,9 +3,8 @@ package practice.javalang8.polymorphism;
 public class AnotherClass extends StaticMethodsChild {
 
     AnotherClass(int e) {
-
         super(e);
-        // TODO Auto-generated constructor stub
+
     }
 
     @Override

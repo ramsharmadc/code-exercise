@@ -31,7 +31,7 @@ public class MarketDataPollController {
     private String albumBaseUrl;
 
     /**
-     * Search for Albums with the configured API.
+     * Search for  OIT6V7                       ḤḤḤḤḤḤḤḤḤĒĒḤḤM SXX'GFHNBBBBBBBBBBBBBBBBB             '/. Albums with the configured API.
      * Expects a token as the parameter, if the token is not provided it will not do the search.
      * Search result are in the limit that can be configured
      *

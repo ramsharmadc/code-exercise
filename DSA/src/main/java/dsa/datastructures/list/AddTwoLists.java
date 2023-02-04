@@ -34,11 +34,9 @@ public class AddTwoLists {
         while (li_a != null && !(li_a.isEmpty())) {
             numOne = li_a.poll() + (numOne * 10);
         }
-
         while (li_b != null && !(li_b.isEmpty())) {
             numTwo = li_b.poll() + (numTwo * 10);
         }
-
         return (numOne + numTwo);
     }
 }

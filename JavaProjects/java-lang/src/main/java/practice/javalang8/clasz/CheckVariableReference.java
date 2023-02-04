@@ -10,7 +10,7 @@ public class CheckVariableReference {
     }
 
     static void swap(Animal a1, Animal a2) {
-        Animal temp = new Animal("");
+        Animal temp;
         temp = a1;
         a1 = a2;
         a2 = temp;

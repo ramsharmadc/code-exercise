@@ -1,4 +1,4 @@
-package practice.bankingapp.;
+package practice.bankingapp;
 
 import java.util.List;
 

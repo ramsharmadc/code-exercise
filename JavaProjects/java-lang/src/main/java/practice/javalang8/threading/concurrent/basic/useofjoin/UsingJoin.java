@@ -11,5 +11,9 @@ public class UsingJoin {
 
         Joiner dopey = new Joiner("Dopey", sleepy), doc = new Joiner("Doc", grumpy);
 
+        System.out.println(Thread.currentThread().getPriority());
+
+
+
     }
 }

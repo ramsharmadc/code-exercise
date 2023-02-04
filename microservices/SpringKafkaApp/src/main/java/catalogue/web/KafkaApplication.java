@@ -1,5 +1,6 @@
 package catalogue.web;
 
+import catalogue.web.kafka.KafkaProducerTest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,9 +14,11 @@ public class KafkaApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(KafkaApplication.class, args);
 
-//        KafkaProducerTest kafkaProducerTest = context.getBean(KafkaProducerTest.class);
-//        kafkaProducerTest.test();
+        KafkaProducerTest kafkaProducerTest = context.getBean(KafkaProducerTest.class);
+        kafkaProducerTest.test();
 
-        // context.close();
+         context.close();
+x
+        //SpringApplication.run(KafkaApplication.class, args);
     }
 }

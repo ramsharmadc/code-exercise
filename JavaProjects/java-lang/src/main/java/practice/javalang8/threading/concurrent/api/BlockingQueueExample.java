@@ -17,7 +17,6 @@ public class BlockingQueueExample {
     }
 }
 
-
 class Producer implements Runnable {
     int c = 0;
 

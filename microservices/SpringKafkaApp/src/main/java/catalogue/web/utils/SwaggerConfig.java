@@ -16,7 +16,7 @@ import java.util.Set;
 public class SwaggerConfig {
 
     public static final Set<String> DEFAULT_PRODUCES_AND_CONSUME =
-            new HashSet<>(Arrays.asList("appliction/json"));
+            new HashSet<>(Arrays.asList("application/json"));
     private static final ApiInfo DEFAULT_API_INFO =
             new ApiInfo("EmployeePortalService",
                     "EmployeePortalService Swagger UI",
