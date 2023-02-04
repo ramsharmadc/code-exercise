@@ -18,7 +18,7 @@ public class KafkaApplication {
         kafkaProducerTest.test();
 
          context.close();
-x
+
         //SpringApplication.run(KafkaApplication.class, args);
     }
 }
