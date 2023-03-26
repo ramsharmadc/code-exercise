@@ -16,4 +16,14 @@ public class ArrayReferences {
         a1[1] = 7;
         return a1;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

@@ -9,6 +9,8 @@ public interface InterfaceA {
         return "";
     }
 
+    de
+
     static void interfaceAsPrivate() {
     }
 }
