@@ -10,7 +10,9 @@ public class FutureExample {
     private static final ExecutorService executorService = Executors.newFixedThreadPool(100);
 
     public static void main(String[] args) {
+        
         try {
+            
             for (int i = 0; i < 100; i++) {
                 int finalI = i;
                 Callable<Integer> callableTask = new Callable<Integer>() {
@@ -19,7 +21,8 @@ public class FutureExample {
                         return finalI + 1;
                     }
                 };
-                futureTasks.add(executorService.submit(callableTask));
+                executorService.submit(callableTask);
+                //futureTasks.add(executorService.submit(callableTask));
             }
 
             for (Future<Integer> f : futureTasks) {

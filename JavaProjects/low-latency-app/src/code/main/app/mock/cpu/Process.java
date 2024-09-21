@@ -18,8 +18,9 @@ public abstract class Process implements Runnable {
         NEW(3, "NEW"),
         TERMINATED(4, "TERMINATED");
 
-        private int stateVal;
+        
         private String stateDesc;
+        private int stateVal;
 
         ProcState(int i, String state) {
             this.stateDesc = state;
@@ -27,7 +28,7 @@ public abstract class Process implements Runnable {
         }
 
         public String getState() {
-            return stateDesc;
+            return stateDesc +":"+stateVal;
         }
     }
 

@@ -133,32 +133,16 @@ public class TestDirectMemoryLayout {
             this.objectOffset = objectOffset;
         }
 
-        public long getTradeId() {
-            return unsafe.getLong(objectOffset + tradeIdOffset);
-        }
-
         public void setTradeId(final long tradeId) {
             unsafe.putLong(objectOffset + tradeIdOffset, tradeId);
-        }
-
-        public long getClientId() {
-            return unsafe.getLong(objectOffset + clientIdOffset);
         }
 
         public void setClientId(final long clientId) {
             unsafe.putLong(objectOffset + clientIdOffset, clientId);
         }
 
-        public int getVenueCode() {
-            return unsafe.getInt(objectOffset + venueCodeOffset);
-        }
-
         public void setVenueCode(final int venueCode) {
             unsafe.putInt(objectOffset + venueCodeOffset, venueCode);
-        }
-
-        public int getInstrumentCode() {
-            return unsafe.getInt(objectOffset + instrumentCodeOffset);
         }
 
         public void setInstrumentCode(final int instrumentCode) {

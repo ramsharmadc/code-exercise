@@ -20,7 +20,4 @@ public class SimpleOffHeapExample {
         }
     }
 
-    private class SimpleDataObject {
-
-    }
 }

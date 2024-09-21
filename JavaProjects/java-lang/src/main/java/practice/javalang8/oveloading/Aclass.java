@@ -8,9 +8,9 @@ public class Aclass {
 
         Aclass a = new Aclass();
 
-//        a.method(null, null); // COMPILE ERROR : ambiguous call
+    //    a.method(null, null); // COMPILE ERROR : ambiguous call
 
-//         a.methodOne(null);
+        // a.methodOne(null);
     }
 
     public static void sum(List<Integer> list) {

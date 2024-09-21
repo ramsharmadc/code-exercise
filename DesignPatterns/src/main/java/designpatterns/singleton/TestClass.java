@@ -11,11 +11,11 @@ public class TestClass extends SampleSingletonClass {
 
         Sequence sequence = Sequence.getInstance();
         int i = 0;
-        while (i++ < 1000)
+        while (i++ < 100000)
             System.out.print(Sequence.next() + " ");
 
         System.out.println("\nUsing stream now");
-        IntStream.range(0, 10000).parallel().forEach(c -> System.out.print(Sequence.next() + " "));
+        IntStream.range(0, 100000).parallel().forEach(c -> System.out.print(Sequence.next() + " "));
     }
 
 }

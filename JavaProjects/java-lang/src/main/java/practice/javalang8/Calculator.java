@@ -19,10 +19,10 @@ public class Calculator {
         System.out.println(add(s, 6));
 
         try {
-            Float f = new Float("3.0");
-            int x = f.intValue();
-            byte b = f.byteValue();
-            double d = f.doubleValue();
+            float f = 3f;
+            int x = (int) f;
+            byte b = (byte) f;
+            double d = (double) f;
             System.out.println(x + b + d);
             List<String> listOfWords = Arrays.asList("Hello", "Java");
             System.out.println(listOfWords);

@@ -27,6 +27,7 @@ public class UseBuilderPattern {
         }
 
         public UseBuilderPattern build() {
+            System.out.println("Building object");
             UseBuilderPattern obj = new UseBuilderPattern(id, age);
             return obj;
         }

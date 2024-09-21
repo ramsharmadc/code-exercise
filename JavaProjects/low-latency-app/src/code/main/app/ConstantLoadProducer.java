@@ -9,6 +9,6 @@ public class ConstantLoadProducer<T> implements Runnable {
         int i = 0;
 
         while (i++<10)
-            q.add(new Integer(i));
+            q.add(Integer.valueOf(i));
     }
 }

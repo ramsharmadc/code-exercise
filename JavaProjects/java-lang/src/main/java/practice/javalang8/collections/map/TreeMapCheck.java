@@ -4,14 +4,14 @@ import java.util.*;
 
 public class TreeMapCheck {
 
-    private static final Comparator<Map.Entry<Integer, Employee>> entryComparator =
-            Comparator.comparingInt(o -> o.getValue().id);
+    private static final Comparator<Map.Entry<Integer, Employee>> entryComparator = Comparator
+            .comparingInt(o -> o.getValue().id);
 
     public static void main(final String[] args) {
 
         final Map<Integer, Employee> employeeMap = new TreeMap<>();
-        final TreeMap<Map.Entry<Integer, Employee>, Integer> employeeMapSortedOnValue =
-                new TreeMap(entryComparator);
+
+        final TreeMap<Map.Entry<Integer, Employee>, Integer> employeeMapSortedOnValue = new TreeMap<>(entryComparator);
 
         employeeMap.put(4, new Employee(123, Calendar.getInstance().getTime()));
         employeeMap.put(6, new Employee(456, Calendar.getInstance().getTime()));

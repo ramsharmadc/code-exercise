@@ -95,33 +95,18 @@ public class TestJavaMemoryLayout {
         private long quantity;
         private char side;
 
-        public long getTradeId() {
-            return tradeId;
-        }
-
         public void setTradeId(final long tradeId) {
             this.tradeId = tradeId;
-        }
-
-        public long getClientId() {
-            return clientId;
         }
 
         public void setClientId(final long clientId) {
             this.clientId = clientId;
         }
 
-        public int getVenueCode() {
-            return venueCode;
-        }
-
         public void setVenueCode(final int venueCode) {
             this.venueCode = venueCode;
         }
 
-        public int getInstrumentCode() {
-            return instrumentCode;
-        }
 
         public void setInstrumentCode(final int instrumentCode) {
             this.instrumentCode = instrumentCode;

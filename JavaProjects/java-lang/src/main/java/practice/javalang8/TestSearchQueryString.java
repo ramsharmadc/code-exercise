@@ -1,4 +1,4 @@
-
+package practice.javalang8;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TestSearchQueryString {
 
-    tesco.SearchQueryString searchQueryString = new tesco.SearchQueryString();
+    SearchQueryString searchQueryString = new SearchQueryString();
 
     @Test
     public void testValidQueryString() {

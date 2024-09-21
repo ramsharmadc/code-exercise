@@ -15,8 +15,10 @@ public class PassNullObject {
     }
 
     public static void main(final String[] args) {
-        callMe("aString");
-        callMe(new Object());
+        Object anObject = new Object();
+        String str  = new String("aString");
+        callMe(str);
+        callMe(anObject);
         callMe(null);
     }
 }

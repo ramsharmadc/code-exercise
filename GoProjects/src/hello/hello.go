@@ -10,8 +10,8 @@ type IntegerHeap []int
 func main() {
 	fmt.Printf("hello, world\n")
 	fmt.Printf("See")
-	reverse()
-	basics()
+	reverse("whatstring")
+	basics("Ram Sharma")
 	checkList()
 
 	i, j, k := checkTuples()
@@ -25,13 +25,18 @@ func checkHeap(iHeap *IntegerHeap) {
 
 }
 
-func reverse() {
+func reverse(sampleStr string) {
 	fmt.Println("What a reverse")
+	fmt.Println(sampleStr)
 }
 
-func basics() {
+func basics(name string) string {
 	v := "Hello GoLang, How we doing"
 	fmt.Println(v)
+
+	message := fmt.Sprintf("Hi,%v. Welcome!", name)
+	fmt.Println(message)
+	return message
 }
 
 func checkList() {

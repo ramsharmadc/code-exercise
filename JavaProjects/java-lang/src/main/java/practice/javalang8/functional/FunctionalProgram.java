@@ -29,12 +29,6 @@ public class FunctionalProgram {
         System.out.println(aConsumer);
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        System.out.println("Finalized is called now...");
-        super.finalize();
-    }
-
     public static boolean isPrime(int x) {
         return x > 1 && IntStream.range(2, x).noneMatch(y -> x % y == 0);
     }

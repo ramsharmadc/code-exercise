@@ -9,14 +9,18 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 
 @interface Todo {
-    public enum Priority {LOW, MEDIUM, HIGH}
 
-    public enum Status {STARTED, NOT_STARTED}
+    public enum Priority {
+        LOW, MEDIUM, HIGH
+    }
 
-    String author() default "Yash";
+    public enum Status {
+        STARTED, NOT_STARTED
+    }
+
+    String author() default "ramsharma";
 
     Priority priority() default Priority.LOW;
 
     Status status() default Status.NOT_STARTED;
 }
-

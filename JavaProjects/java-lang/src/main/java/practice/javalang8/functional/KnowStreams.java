@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class KnowStreams {
 
     public static void main(String[] args) {
-
         List<Dish> menu = Arrays.asList(
                 new Dish("pork", false, 800, KnowStreams.Type.MEAT),
                 new Dish("beef", false, 700, KnowStreams.Type.MEAT),
@@ -24,24 +24,23 @@ public class KnowStreams {
     }
 
     private static void exploreStreams(List<Dish> menu) {
-        List<String> threeHighestCalorieDishes =
-                menu.stream().
-                        filter(x -> {
-                            System.out.println("filtering " + x.name);
-                            return x.getCalories() > 500;
-                        }).
-                        limit(3).
-                        sorted(Comparator.comparingInt(x -> x.calories)).
-                        map(x -> {
-                            System.out.println("mapping " + x.name);
-                            return x.name;
-                        }).
-                        collect(Collectors.toList());
+        List<String> threeHighestCalorieDishes = menu.stream().filter(x -> {
+            System.out.println("filtering " + x.name);
+            return x.getCalories() > 500;
+        }).limit(3).sorted(Comparator.comparingInt(x -> x.calories)).map(x -> {
+            System.out.println("mapping " + x.name);
+            return x.name;
+        }).collect(Collectors.toList());
         System.out.println(threeHighestCalorieDishes);
 
+        menu.stream().flatMap(x->Stream.of(x.getName()+"-"+x.getCalories())).forEach(x->{
+            System.out.println("Flat Mapped to :: " + x);
+        });
     }
 
-    public enum Type {MEAT, FISH, OTHER}
+    public enum Type {
+        MEAT, FISH, OTHER
+    }
 
     static class Dish {
         private final String name;

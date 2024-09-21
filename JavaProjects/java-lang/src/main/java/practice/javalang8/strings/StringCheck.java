@@ -5,9 +5,7 @@ import java.util.StringTokenizer;
 public class StringCheck {
 
     public static void main(String[] args) {
-
         String tokenOfStrings = "Hello We can get this done";
-
         SampleString sampleString1 = new SampleString("raammsharma");
         System.out.println(sampleString1.value());
         sampleString1.setCharAt(5, "kishan");
@@ -29,8 +27,10 @@ public class StringCheck {
         System.out.println(d);
 
         StringTokenizer stringTokenizer = new StringTokenizer("Hello|World|Of|Java|Strings", "|");
-        while (stringTokenizer.hasMoreTokens())
-            System.out.println(stringTokenizer.nextToken());
+
+        stringTokenizer.asIterator().forEachRemaining(x-> System.out.print(x+"|"));
+        /*while (stringTokenizer.hasMoreTokens())
+            System.out.print(stringTokenizer.nextToken()+"|");*/
     }
 
     static class SampleString // extends String
